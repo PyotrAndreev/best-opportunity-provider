@@ -1,5 +1,7 @@
 from includes import *
 
+start_time = time.time()
+
 url = 'https://ru.studyqa.com/internships/countries/cities/industries?page='
 
 service = ChromeService(executable_path=ChromeDriverManager().install())
@@ -15,18 +17,16 @@ driver = webdriver.Chrome(service=service, options=options)
 
 culc = 0
 allVacancyCard_link = []
-for page in range(1, 2):
+for page in range(1, 8):
   driver.get(url + f'{page}')
   page = driver.page_source
-
   soup = BeautifulSoup(page, "html.parser")
-  allVacancyCard = soup.findAll('div', class_='cards__list')
-  for link in soup.findAll('a', class_='btn btn-secondary'):
+  for link in soup.findAll('div', class_='cards__list'):
     culc+=1
     print(culc)
-    allVacancyCard_link.append(link.get('href'))
+    allVacancyCard_link.append(link.find('a', class_='btn btn-secondary').get('href'))
 
-allVacancyCard_link = allVacancyCard_link[:1]
+# allVacancyCard_link = allVacancyCard_link[:1]
 
 #------------------Writing the html code of the job cards to the file----------------
 # with open('allVacancy.html', 'w', encoding='utf-8') as f:
@@ -37,50 +37,40 @@ allVacancyCard_link = allVacancyCard_link[:1]
 #   for s in allVacancyCard_link:
 #     f.write(str(s) + '\n')
 
-allFormsJSON = []
-allVacancyCard_JSON = []
-for link in allVacancyCard_link:
-  card_data = {}
+json_file = open('../JSON_webs/allVacancyCard_JSON_Studyqa.json', 'a', encoding='utf-8')
 
+json_file.write("[")
+for num_link in range(len(allVacancyCard_link)):
+  link = allVacancyCard_link[num_link]
   driver.get(link)
   pageVacancy = driver.page_source
-  soupVacancy = BeautifulSoup(pageVacancy, "html.parser")
-
-  card_data['link'] = link
-  card_data['title'] = str(soupVacancy.find('div', class_='page__title seo__item').text.replace("\n", ""))
-  card_data['short_description'] = str(soupVacancy.find('div', class_='text__custom').text.replace("\n", ""))
-  card_data['description'] = str(soupVacancy.find('div', class_='section sc__main sc__main-country').text.replace("\n", ""))
-
-  card_tags=[]
-  tags = soupVacancy.find('div', class_='page__descr')
-  for tag in tags.find_all('li'):
-    card_tags.append(tag.text.replace("\n", ""))
-  card_data['tags'] = card_tags
-  
-  sleep(1)
-  form_link = link + soupVacancy.find('a', class_='btn btn-primary d-flex align-items-center toggle__form-js').get('href')
-
-  form_data = {}
-
-  form_data['link'] = form_link
-
-  soupForm = soup.find('div', class_='form-group')
-  for thing in soupForm.findAll('div', class_='form-field'):
-    if(thing.find('div', class_='select-wrap') is None):
-      name = thing.find('input').get('placeholder')
-      form_data[name] = {'value': '', 'type':'string'}
+  html_code = BeautifulSoup(driver.page_source, "html.parser")
+  question = f"Carefully and correctly fill in the maximum number of fields in the json form: {example}. using this html job code {html_code}. I want the data in the new JSON to be translated into Russian and rephrased so that they can be used as separate sentences. Just send me the code of this JSON."
+  completion = client.chat.completions.create(
+    model="nvidia/llama-3.1-nemotron-70b-instruct",
+    messages=[{"role":"user","content":question}],
+    temperature=0.1,
+    top_p=1,
+    max_tokens=8192,
+    stream=True
+  )
+  result = ''
+  for chunk in completion:
+    if chunk.choices[0].delta.content is not None:
+      result += str(chunk.choices[0].delta.content)
       
-  for thing in soupForm.findAll('div', class_='select-wrap'):
-    name = thing.get('data-placeholder')
-    values = []
-    for thing2 in thing.findAll('option'):
-      if(thing2.get('value') is not None):
-        values.append((thing2.get('value'), thing2.text))
-    form_data[name] = {'value': values, 'type':'select-wrap'}
-
-  allFormsJSON.append(form_data)
-  card_data['form'] = form_data
-  allVacancyCard_JSON.append(card_data)
+  start = -1
+  end = -1
+  for i in range(len(result)):
+    if(result[i] == '{' and start == -1):
+      start = i
+    if(result[i] == '}'):
+      end = i
+  
+  if(num_link != 0):
+    json_file.write(',\n')
+  json_file.write(result[start: end + 1])
+json_file.write("\n]")
     
 
 #-------------------Writing the html code of the forms for vacancies to the file--------------
@@ -96,3 +86,5 @@ for link in allVacancyCard_link:
 #   json_file.write("{ }\n}")
 
 driver.close()  
+
+print("--- Work time: %s seconds ---" % (time.time() - start_time))

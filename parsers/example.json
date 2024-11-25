@@ -19,17 +19,17 @@
 
   "selection_stages": [
     {
-      "name": "Подача",
+      "name": "",
       "period": "",
       "objectives": []
     },
     {
-      "name": "Одобрение CV и собеседование",
+      "name": "",
       "period": "",
       "objectives": []
     },
     {
-      "name": "Список прошедших",
+      "name": "",
       "period": "",
       "objectives": []
     }
