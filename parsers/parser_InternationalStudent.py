@@ -15,7 +15,7 @@ driver = webdriver.Chrome(service=service, options=options)
 #   f.write(page)
 
 allVacancyCard_link = []
-for num in range(1, 143):
+for num in range(1, 2):
   try:
     driver.get(url + f'{num}')
     page = driver.page_source
@@ -27,7 +27,7 @@ for num in range(1, 143):
     allVacancyCard_link.append('https://www.internationalstudent.com' + link.get('href'))
 
 driver.close() 
-# allVacancyCard_link = allVacancyCard_link[:1]
+allVacancyCard_link = allVacancyCard_link[:1]
 
 #------------------Writing the html code of the job cards to the file----------------
 # with open('allVacancy.html', 'w', encoding='utf-8') as f:
@@ -82,6 +82,13 @@ for link in allVacancyCard_link:
       if(thing2.get('value') is not None):
         values.append((thing2.get('value'), thing2.text))
     form_data[name] = {'value': values, 'type':'select-wrap'}
+
+  if soupForm.find('img') is not None:
+    response = requests.get('	https://www.internationalstudent.com' + soupForm.find('img').get('src'))
+    image = Image.open(BytesIO(response.content))
+    txt = pytesseract.image_to_string(image, lang='eng').replace("\n", "")
+    print(txt)
+    form_data['Type the text from the image ']['value'] = txt
 
   card_data['form'] = form_data
   allVacancyCard_JSON.append(card_data)

@@ -45,15 +45,7 @@ for link in allVacancyCard_link:
   soupVacancy = BeautifulSoup(pageVacancy, "html.parser")
 
   card_data['link'] = link
-  card_data['title'] = (soupVacancy.find('h1', class_='lc-styled-text__text').text if soupVacancy.find('h1', class_='lc-styled-text__text') is not None else '')
-  card_data['short_description'] = (soupVacancy.find('section', class_='lc-jobs-common-section').text if soupVacancy.find('section', class_='lc-jobs-common-section') is not None else '')
-  card_data['description'] = (soupVacancy.find('div', class_='lc-jobs-vacancy-mvp__description').text if soupVacancy.find('div', class_='lc-jobs-vacancy-mvp__description') is not None else '')
 
-  card_tags=[]
-  for tag in soupVacancy.find_all('span', class_='Text Text_typography_control-s lc-jobs-tag__label'):
-    card_tags.append(tag.text)
-  card_data['tags'] = card_tags
-  
   sleep(1)
   tmp1 = soupVacancy.find('iframe', class_='lc-iframe__iframe')
   while(tmp1 is None):
@@ -70,7 +62,17 @@ for link in allVacancyCard_link:
       form_link += s
     else:
       break
+  card_data['form_link'] = form_link
+  card_data['name'] = (soupVacancy.find('h1', class_='lc-styled-text__text').text if soupVacancy.find('h1', class_='lc-styled-text__text') is not None else '')
+  card_data['short_description'] = (soupVacancy.find('section', class_='lc-jobs-common-section').text if soupVacancy.find('section', class_='lc-jobs-common-section') is not None else '')
+  card_data['description'] = (soupVacancy.find('div', class_='lc-jobs-vacancy-mvp__description').text if soupVacancy.find('div', class_='lc-jobs-vacancy-mvp__description') is not None else '')
+  card_data['logo'] = (soupVacancy.find('img', class_='lc-jobs-header__logo-image').get('src') if soupVacancy.find('img', class_='lc-jobs-header__logo-image') is not None else '')
 
+  card_tags=[]
+  for tag in soupVacancy.find_all('span', class_='Text Text_typography_control-s lc-jobs-tag__label'):
+    card_tags.append(tag.text)
+  card_data['tags'] = card_tags
+  
   allVacancyForms.append(form_link)
   driver.get(form_link)
   sleep(1)

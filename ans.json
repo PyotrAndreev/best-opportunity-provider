@@ -1,0 +1,176 @@
+Here is the JSON form filled in with the maximum number of fields, paraphrased in the nominative case in Russian:
+
+```
+{
+  "link": "https://yandex.ru/jobs/vacancies/menedzherstazher-po-svyazyam-s-obschestvennostyu-27231",
+  "form_link": "https://yandex.ru/jobs/vacancies/menedzherstazher-po-svyazyam-s-obschestvennostyu-27231",
+  "name": "Менеджер-стажер по связям с общественностью",
+  "short_description": "Стажер",
+  "description": "Команда бизнес-группы Поиска и рекламных технологий ищет стажёра, который усилит команду внешних коммуникаций.",
+  "provider": "Яндекс",
+  "logo": "https://avatars.mds.yandex.net/get-lpc/1364677/5990ea89-29b4-4d73-aedb-3ea76719477f/orig",
+  "requirements": [
+    {
+      "name": "Хотите работать в B2B-коммуникациях",
+      "description": ""
+    },
+    {
+      "name": "Умеете просто и увлекательно рассказывать о сложном",
+      "description": ""
+    },
+    {
+      "name": "Готовы работать на результат и измерять его",
+      "description": ""
+    },
+    {
+      "name": "Готовы самостоятельно вести проекты и составлять бюджеты",
+      "description": ""
+    },
+    {
+      "name": "Умеете или хотите научиться работать с журналистами и лидерами мнений",
+      "description": ""
+    },
+    {
+      "name": "Имеете отличные коммуникативные навыки и с лёгкостью находите общий язык с разными людьми",
+      "description": ""
+    }
+  ],
+  "advantages": [
+    {
+      "name": "Оплачиваемая стажировка",
+      "description": ""
+    },
+    {
+      "name": "Неполный рабочий день (20 часов в неделю)",
+      "description": ""
+    },
+    {
+      "name": "Офисный формат работы",
+      "description": ""
+    },
+    {
+      "name": "Сильную команду, у которой можно многому научиться",
+      "description": ""
+    },
+    {
+      "name": "Компенсацию затрат на питание",
+      "description": ""
+    }
+  ],
+  "target": [
+    {
+      "name": "Студенты",
+      "description": ""
+    },
+    {
+      "name": "Молодые специалисты",
+      "description": ""
+    }
+  ],
+  "discipline": [
+    {
+      "name": "Маркетинг",
+      "description": ""
+    },
+    {
+      "name": "ПР",
+      "description": ""
+    }
+  ],
+  "place": [
+    {
+      "name": "Москва",
+      "description": ""
+    }
+  ],
+  "period_of_internship": "6 месяцев",
+  "selection_stages": [
+    {
+      "name": "Подача",
+      "period": "",
+      "objectives": [
+        {
+          "name": "Написать резюме",
+          "description": ""
+        },
+        {
+          "name": "Написать мотивационное письмо",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Одобрение CV и собеседование",
+      "period": "",
+      "objectives": [
+        {
+          "name": "Провести собеседование",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Список прошедших",
+      "period": "",
+      "objectives": [
+        {
+          "name": "Сформировать список прошедших кандидатов",
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "allowance": "Оплачиваемая стажировка",
+  "expenses": "Неполный рабочий день (20 часов в неделю)",
+  "additional": [
+    {
+      "title": "Как в Яндексе проходят собеседования для аналитиков",
+      "description": "https://yandex.ru/jobs/pages/analytics_interview"
+    },
+    {
+      "title": "Как в Яндексе проходят алгоритмические секции собеседований",
+      "description": "https://habr.com/ru/company/yandex/blog/449890/"
+    },
+    {
+      "title": "Как мы нанимаем дизайнеров",
+      "description": "/jobs/pages/des-interview"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Маркетинг",
+      "description": ""
+    },
+    {
+      "name": "ПР",
+      "description": ""
+    }
+  ],
+  "form": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "label": "Имя"
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "name": "Электронная почта"
+    },
+    "phone": {
+      "type": "string",
+      "required": true,
+      "name": "Номер телефона"
+    },
+    "cv": {
+      "type": "file",
+      "required": true,
+      "name": "Резюме"
+    },
+    "motivation_letter": {
+      "type": "file",
+      "required": true,
+      "name": "Мотивационное письмо"
+    }
+  }
+}

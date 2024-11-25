@@ -1,0 +1,73 @@
+
+{
+  "link": "",
+  "form_link": "",
+
+  "name": "",
+  "short_description": "",
+  "description": "",
+  "provider": "",
+  "logo": "",
+
+  "requirements": [],
+  "advantages": [],
+  "target": [],
+  "discipline": [],
+
+  "place": [],
+  "period_of_internship": "",
+
+  "selection_stages": [
+    {
+      "name": "Подача",
+      "period": "",
+      "objectives": []
+    },
+    {
+      "name": "Одобрение CV и собеседование",
+      "period": "",
+      "objectives": []
+    },
+    {
+      "name": "Список прошедших",
+      "period": "",
+      "objectives": []
+    }
+  ],
+
+  "allowance": "",
+  "expenses": "",
+
+  "additional": [
+    {
+      "title": "",
+      "description": ""
+    },
+    {
+      "title": "",
+      "description": ""
+    },
+    {
+      "title": "",
+      "description": ""
+    }
+  ],
+
+  "tags": [],
+
+  "form": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "label": ""
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "name": ""
+    },
+    {
+      ... 
+    }
+  }
+}

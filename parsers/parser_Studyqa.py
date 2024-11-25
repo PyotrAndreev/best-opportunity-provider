@@ -15,7 +15,7 @@ driver = webdriver.Chrome(service=service, options=options)
 
 culc = 0
 allVacancyCard_link = []
-for page in range(1, 8):
+for page in range(1, 2):
   driver.get(url + f'{page}')
   page = driver.page_source
 
@@ -26,7 +26,7 @@ for page in range(1, 8):
     print(culc)
     allVacancyCard_link.append(link.get('href'))
 
-# allVacancyCard_link = allVacancyCard_link[:1]
+allVacancyCard_link = allVacancyCard_link[:1]
 
 #------------------Writing the html code of the job cards to the file----------------
 # with open('allVacancy.html', 'w', encoding='utf-8') as f:
@@ -37,7 +37,7 @@ for page in range(1, 8):
 #   for s in allVacancyCard_link:
 #     f.write(str(s) + '\n')
 
-allVacancyForms = []
+allFormsJSON = []
 allVacancyCard_JSON = []
 for link in allVacancyCard_link:
   card_data = {}
@@ -60,9 +60,6 @@ for link in allVacancyCard_link:
   sleep(1)
   form_link = link + soupVacancy.find('a', class_='btn btn-primary d-flex align-items-center toggle__form-js').get('href')
 
-
-  allVacancyForms.append(form_link)
-
   form_data = {}
 
   form_data['link'] = form_link
@@ -81,6 +78,7 @@ for link in allVacancyCard_link:
         values.append((thing2.get('value'), thing2.text))
     form_data[name] = {'value': values, 'type':'select-wrap'}
 
+  allFormsJSON.append(form_data)
   card_data['form'] = form_data
   allVacancyCard_JSON.append(card_data)
     
@@ -90,11 +88,11 @@ for link in allVacancyCard_link:
 #   for s in allVacancyForms:
 #     f.write(str(s) + '\n')
 
-with open('Offer/JSON_webs/allVacancyCard_JSON_Studyqa.json', 'w', encoding='utf-8') as json_file:
-  json_file.write("{")
-  for for_json in allVacancyCard_JSON:
-    json.dump(for_json, json_file, ensure_ascii=False, indent=4)
-    json_file.write(",\n")
-  json_file.write("{ }\n}")
+# with open('Offer/JSON_webs/allVacancyCard_JSON_Studyqa.json', 'w', encoding='utf-8') as json_file:
+#   json_file.write("{")
+#   for for_json in allVacancyCard_JSON:
+#     json.dump(for_json, json_file, ensure_ascii=False, indent=4)
+#     json_file.write(",\n")
+#   json_file.write("{ }\n}")
 
 driver.close()  
