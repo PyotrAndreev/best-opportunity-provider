@@ -38,12 +38,35 @@
             "name": {
                 "type": "string",
                 "required": true,
-                "label": "Имя (латиницей)"
+                "label": "Имя (латиницей)",
+                "max_len": 100
             },
             "email": {
                 "type": "email",
                 "required": true,
                 "name": "Ваш email"
+            },
+            "age": {
+                "type": "number",
+                "required": true,
+                "name": "Ваш возраст на момент начала стажировки"
+            },
+            "lang_lvl": {
+                "type": "choice",
+                "required": true,
+                "name": "Ваш уровень владения английским",
+                "choices": ["B2", "C1", "C2", "L1 ДИЯ"]
+            },
+            "cv": {
+                "type": "file",
+                "required": true,
+                "name": "Отправьте свое резюме",
+                "max_size_byte": 10485760
+            },
+            "telephone": {
+                "type": "tel",
+                "required": true,
+                "name": "Ваш телефон"
             }
         }
     }
