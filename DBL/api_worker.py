@@ -3,6 +3,7 @@ from DBL.config import *
 from DBL.api_keygen import api_key
 from DBL.forms import convert_field_for_db
 import DBL.renderer as renderer
+from DBL.tags_worker import add_opportunity_tags
 
 
 def create_provider(provider_name: str) -> int:
@@ -69,6 +70,12 @@ def create_opportunity(opportunity) -> int:
     success = load_md_desc(opp_id, opportunity)
     if not success:
         dbl_err(f'Can not add opportunity "{opportunity["name"]}" description MD')
+        return -1
+
+    # Load tags
+    success = add_opportunity_tags(opp_id, opportunity['tags'])
+    if not success:
+        dbl_err(f'Can not add opportunity "{opportunity["name"]}" tags')
         return -1
 
     dbl_log(f'Opportunity "{opportunity["name"]}" successfully created!')
