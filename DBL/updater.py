@@ -1,7 +1,7 @@
 from DBL.config import *
 import DBL.json_worker as json_worker
 from DBL.parsers.run import parse_all
-import DBL.renderer as renderer
+import DBL.api_worker as api_worker
 
 
 def get_opportunities_list():
@@ -14,6 +14,10 @@ def get_opportunities_list():
 
 def update():
     opportunities = get_opportunities_list()
-    renderer.save_md(opportunities[0], 'DBL/rendered/example.md')
-    # TODO: API DB
-    # TODO: MD - how to save
+    dbl_log('Loading opportunities to DB')
+    success = 0
+    for opp in opportunities:
+        result = api_worker.create_opportunity(opp)
+        if result == 0:
+            success += 1
+    dbl_log(f'Loaded opportunities to DB ({success}/{len(opportunities)})')
