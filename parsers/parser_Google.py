@@ -1,25 +1,20 @@
 from config import *
-
 start_time = time.time()
 
-url = 'https://yandex.ru/jobs/vacancies?text=стажёр'
+url = 'https://www.google.com/about/careers/applications/jobs/results/?src=Online/Google%20Website/ByF&utm_source=Online%20&utm_medium=careers_site%20&utm_campaign=ByF&company=Fitbit&company=Google&company=YouTube&distance=50&employment_type=INTERN'
+json_file = open('../JSON_webs/allVacancyCard_JSON_CIEE.json', 'a', encoding='utf-8')
 
-driver.get(url)
+driver.get(url) 
 soup = BeautifulSoup(driver.page_source, "html.parser")
-
 allVacancyCard_link = []
-for link in soup.findAll('a', class_='lc-jobs-vacancy-card__link'):
-  allVacancyCard_link.append('https://yandex.ru' + link.get('href'))
-
-# allVacancyCard_link = allVacancyCard_link[:1]
-
-json_file = open('../JSON_webs/allVacancyCard_JSON_Yandex.json', 'a', encoding='utf-8')
+for link in soup.find_all('a', class_='WpHeLc VfPpkd-mRLv6 VfPpkd-RLmnJb'):
+  allVacancyCard_link.append('https://www.google.com/about/careers/applications/' + link.get('href'))
 
 json_file.write("[")
 for num_link in range(len(allVacancyCard_link)):
   link = allVacancyCard_link[num_link]
   driver.get(link)
-  html_code = BeautifulSoup(driver.page_source, "html.parser")
+  html_code = BeautifulSoup(driver.page_source, "html.parser").find('div', class_='ObfsIf-haAclf ObfsIf-haAclf-fW01td-oXtfBe tFpK0')
   question = f"Fill in the maximum number of fields in the json form: {example}. using this html code of the vacancy {html_code}. Also, be sure to find links to the vacancy and the mold and paste them into json. I want the data in the new JSON to be translated into Russian and rephrased so that they can be used as separate sentences. Send me only the code of this JSON."
 
   completion = client.chat.completions.create(

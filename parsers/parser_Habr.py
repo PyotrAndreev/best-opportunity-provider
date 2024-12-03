@@ -1,24 +1,13 @@
-from includes import *
+from config import *
+start_time = time.time()
 
 url = 'https://career.habr.com/vacancies?qid=1&type=all&page='
-json_file = open('Offer/JSON_webs/allVacancyCard_JSON_Habr.json', 'a', encoding='utf-8')
-
-service = ChromeService(executable_path=ChromeDriverManager().install())
-
-options = webdriver.ChromeOptions()
-options.timeouts = { 'pageLoad': 5000 }
-# options.add_argument("--headless")
-
-driver = webdriver.Chrome(service=service, options=options)
-
-#------------------Writing the html code of the page to the file----------------------
-# with open('out.html', 'w', encoding='utf-8') as f:
-#   f.write(page)
+json_file = open('../JSON_webs/allVacancyCard_JSON_Habr.json', 'a', encoding='utf-8')
 
 allVacancyCard_link = []
-for page in range(1, 7):
+for page_num in range(1, 7):
   try:
-    driver.get(url + f'{page}') 
+    driver.get(url + f'{page_num}') 
   except:
     continue
   page = driver.page_source
@@ -28,64 +17,43 @@ for page in range(1, 7):
 
 # allVacancyCard_link = allVacancyCard_link[:1]
 
-#------------------Writing the html code of the job cards to the file----------------
-# with open('allVacancy.html', 'w', encoding='utf-8') as f:
-#   f.write(str(allVacancyCard))
-
-#------------------Writing links to vacancies in the file--------------------------------
-# with open('allVacancy_link.html', 'w', encoding='utf-8') as f:
-#   for s in allVacancyCard_link:
-#     f.write(str(s) + '\n')
-
 culc = 0
 allVacancyForms = []
 allVacancyCard_JSON = []
 json_file.write("[")
-for link in allVacancyCard_link:
-  card_data = {}
-
+for num_link in range(len(allVacancyCard_link)):
+  link = allVacancyCard_link[num_link]
   try:
     driver.get(link)
   except:
     continue
-  pageVacancy = driver.page_source
-  soupVacancy = BeautifulSoup(pageVacancy, "html.parser")
-
-  card_data['id'] = culc
-  card_data['link'] = link
-  card_data['title'] = str(soupVacancy.find('h1', class_='page-title__title').text.replace("\n", ""))
-  card_data['short_description'] = str((soupVacancy.find('div', class_='vacancy-description__text').find('p').text if soupVacancy.find('div', class_='vacancy-description__text') is not None else '')).replace("\n", "")
-  card_data['description'] = str((soupVacancy.find('div', class_='vacancy-description__text').text if soupVacancy.find('div', class_='vacancy-description__text') is not None else '')).replace("\n", "")
-
-  card_data['tags']  = (''.join([(tag.find('span', class_='inline-list').text if tag.find('span', class_='inline-list') is not None else '') for tag in soupVacancy.find_all('div', class_='content-section')])).replace('\n\n', '\n').replace('\t', '').split('\n')
-
-  form_data = {
-    'Email'  : {'value': '', 'type':'string'},
-    'Никнейм' : {'value': '', 'type':'string'},
-    'Пароль' : {'value': '', 'type':'string'},
-    'Имя' : {'value': '', 'type':'string'},
-    'Фамилия' : {'value': '', 'type':'string'},
-    'Пол' : {'value': '', 'type':'string'},
-    'Дата рождения' : {'value': '', 'type':'string'},
-    'Специализация' : {'value': '', 'type':'string'},
-    'Профессиональные навыки' : {'value': '', 'type':'string'}
-    }
-
-  card_data['form'] = form_data
-  allVacancyCard_JSON.append(card_data)
-
-  json.dump(card_data, json_file, ensure_ascii=False, indent=4)
-  json_file.write(",\n")
-
-  culc+=1
-  print(culc)
-  card_data['id'] = culc
-
-json_file.write("{ }\n]")
-
-#-------------------Writing the html code of the forms for vacancies to the file--------------
-# with open('allVacancy_form.html', 'w', encoding='utf-8') as f:
-#   for s in allVacancyForms:
-#     f.write(str(s) + '\n')
+  html_code = BeautifulSoup(driver.page_source, "html.parser")
+  question = f"Fill in the maximum number of fields in the json form: {example}. using this html job code {html_code}. I want the data in the new JSON to be translated into Russian and rephrased so that they can be used as separate sentences. Just send me the code of this JSON."
+  completion = client.chat.completions.create(
+    model="nvidia/llama-3.1-nemotron-70b-instruct",
+    messages=[{"role":"user","content":question}],
+    temperature=0.1,
+    top_p=1,
+    max_tokens=8192,
+    stream=True
+  )
+  result = ''
+  for chunk in completion:
+    if chunk.choices[0].delta.content is not None:
+      result += str(chunk.choices[0].delta.content)
+      
+  start = -1
+  end = -1
+  for i in range(len(result)):
+    if(result[i] == '{' and start == -1):
+      start = i
+    if(result[i] == '}'):
+      end = i
+  
+  if(num_link != 0):
+    json_file.write(',\n')
+  json_file.write(result[start: end + 1])
+json_file.write("\n]")
 
 driver.close()  
+print("--- Work time: %s seconds ---" % (time.time() - start_time))

@@ -1,24 +1,13 @@
-from includes import *
+from config import *
 
 start_time = time.time()
 
 url = 'https://ru.studyqa.com/internships/countries/cities/industries?page='
 
-service = ChromeService(executable_path=ChromeDriverManager().install())
-
-options = webdriver.ChromeOptions()
-# options.add_argument("--headless")
-
-driver = webdriver.Chrome(service=service, options=options)
-
-#------------------Writing the html code of the page to the file----------------------
-# with open('out.html', 'w', encoding='utf-8') as f:
-#   f.write(page)
-
 culc = 0
 allVacancyCard_link = []
-for page in range(1, 8):
-  driver.get(url + f'{page}')
+for page_num in range(1, 8):
+  driver.get(url + f'{page_num}')
   page = driver.page_source
   soup = BeautifulSoup(page, "html.parser")
   for link in soup.findAll('div', class_='cards__list'):
@@ -28,24 +17,14 @@ for page in range(1, 8):
 
 # allVacancyCard_link = allVacancyCard_link[:1]
 
-#------------------Writing the html code of the job cards to the file----------------
-# with open('allVacancy.html', 'w', encoding='utf-8') as f:
-#   f.write(str(allVacancyCard))
-
-#------------------Writing links to vacancies in the file--------------------------------
-# with open('allVacancy_link.html', 'w', encoding='utf-8') as f:
-#   for s in allVacancyCard_link:
-#     f.write(str(s) + '\n')
-
 json_file = open('../JSON_webs/allVacancyCard_JSON_Studyqa.json', 'a', encoding='utf-8')
 
 json_file.write("[")
 for num_link in range(len(allVacancyCard_link)):
   link = allVacancyCard_link[num_link]
   driver.get(link)
-  pageVacancy = driver.page_source
   html_code = BeautifulSoup(driver.page_source, "html.parser")
-  question = f"Carefully and correctly fill in the maximum number of fields in the json form: {example}. using this html job code {html_code}. I want the data in the new JSON to be translated into Russian and rephrased so that they can be used as separate sentences. Just send me the code of this JSON."
+  question = f"Fill in the maximum number of fields in the json form: {example}. using this html job code {html_code}. I want the data in the new JSON to be translated into Russian and rephrased so that they can be used as separate sentences. Just send me the code of this JSON."
   completion = client.chat.completions.create(
     model="nvidia/llama-3.1-nemotron-70b-instruct",
     messages=[{"role":"user","content":question}],
@@ -71,19 +50,6 @@ for num_link in range(len(allVacancyCard_link)):
     json_file.write(',\n')
   json_file.write(result[start: end + 1])
 json_file.write("\n]")
-    
-
-#-------------------Writing the html code of the forms for vacancies to the file--------------
-# with open('allVacancy_form.html', 'w', encoding='utf-8') as f:
-#   for s in allVacancyForms:
-#     f.write(str(s) + '\n')
-
-# with open('Offer/JSON_webs/allVacancyCard_JSON_Studyqa.json', 'w', encoding='utf-8') as json_file:
-#   json_file.write("{")
-#   for for_json in allVacancyCard_JSON:
-#     json.dump(for_json, json_file, ensure_ascii=False, indent=4)
-#     json_file.write(",\n")
-#   json_file.write("{ }\n}")
 
 driver.close()  
 

@@ -1,41 +1,29 @@
-from includes import *
+from config import *
 
-from parser_Yandex import allFormsJSON
-
-for card in allFormsJSON:
+def fill_yandex_forms(card) -> None:
   link = card['link']
-  service = ChromeService(executable_path=ChromeDriverManager().install())
-  options = webdriver.ChromeOptions()
-  # options.add_argument("--headless")
-  driver = webdriver.Chrome(service=service, options=options)
   driver.get(link)
-  soupForm = BeautifulSoup(driver.page_source, "html.parser")
-  sleep(1)
   driver.find_element(by ="xpath", value="/html/body/div[1]/div/main/form/div/div[2]/div[2]/div/div[1]/label[2]").click()
-  sleep(1)
-  driver.find_element(by ="xpath", value="/html/body/div[1]/div/main/form/div/div[3]/div[2]/div[1]/span/span/input").send_keys(card['Добавить резюме']['value'])
+  driver.find_element(by ="xpath", value="/html/body/div[1]/div/main/form/div/div[3]/div[2]/div[1]/span/span/input").send_keys(card['form']['resume']['label'])
 
   values = []
-  for atribute in card:
-    if atribute != 'link' and atribute != 'Добавить резюме':
-      values.append(card[atribute]['value'])
+  for atribute in card['form']:
+    if atribute != 'link' and atribute != 'resume':
+      values.append(card['form'][atribute]['label'])
   pos = 0
 
-  dom = etree.HTML(str(soupForm))
+  dom = etree.HTML(driver.page_source)
   tree = etree.ElementTree(dom)
-  formInputs = dom.xpath('//*/span/span/input')
-  for thing in formInputs:
+  form_inputs = dom.xpath('//*/span/span/input')
+  for thing in form_inputs:
     driver.find_element(by ="xpath", value=tree.getpath(thing)).send_keys(values[pos])
     pos += 1
-    sleep(2)
-  formInputs = dom.xpath('//*/textarea')
-  for thing in formInputs:
+  form_inputs = dom.xpath('//*/textarea')
+  for thing in form_inputs:
     driver.find_element(by ="xpath", value=tree.getpath(thing)).send_keys(values[pos])
     pos += 1
-    sleep(2)
 
   driver.find_element(by ="xpath", value="/html/body/div[1]/div/main/form/div/div[10]/div/div/div[1]/label/span[1]/input").click()
   driver.find_element(by ="xpath", value="/html/body/div[1]/div/main/form/div/div[11]/div/div/div[1]/label/span[1]/input").click()
   driver.find_element(by ="xpath", value="/html/body/div[1]/div/main/form/div/div[12]/div/div/div[1]/label/span[1]/input").click()
-  
-  sleep(30)
+  driver.close()
