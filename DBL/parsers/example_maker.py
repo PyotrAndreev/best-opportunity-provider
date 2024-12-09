@@ -81,6 +81,7 @@ JSON = """
 
 
 def run():
+    # Fake parser
     with open(f'{PARSER_JSON_DIR}/example_run.json', 'w', encoding='utf-8') as f:
         f.write(JSON)
     return 'example_run.json'

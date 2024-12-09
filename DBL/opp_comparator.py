@@ -1,4 +1,4 @@
-# TODO: connect config
+from DBL.config import *
 
 # Compares links by netloc+path (scheme (http/https/etc) ignored)
 def compare_links(l1: str, l2: str) -> bool:

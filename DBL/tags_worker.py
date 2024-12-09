@@ -27,7 +27,7 @@ def update_tags():
     headers = {
         "api_key": api_key
     }
-    response = requests.get('/api/private/...', headers=headers)  # TODO: URL
+    response = requests.get('/api/private/opportunity-tag/list', headers=headers)
     if not response:
         dbl_err(f'Can not load tags from DB')
     tags_in_db = [(tag['id'], tag['name']) for tag in response.json().get('tags', [])]
@@ -72,5 +72,5 @@ def add_opportunity_tags(opp_id: int, tag_list: list[str]) -> bool:
     json = {
         "tag_ids": tag_ids
     }
-    response = requests.post('/api/private/opportunity/tags', headers=headers, json=json)
+    response = requests.put('/api/private/opportunity/tags', headers=headers, json=json)
     return bool(response)
