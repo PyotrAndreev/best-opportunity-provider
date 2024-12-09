@@ -2,6 +2,7 @@ from DBL.config import *
 import DBL.json_worker as json_worker
 from DBL.parsers.run import parse_all
 import DBL.api_worker as api_worker
+from DBL.opp_comparator import opportunity_cmp
 
 
 def get_opportunities_list():
@@ -15,9 +16,10 @@ def get_opportunities_list():
 def update():
     opportunities = get_opportunities_list()
     dbl_log('Loading opportunities to DB')
-    success = 0
+    worker_r = {'created': 0, 'updated': 0, 'err': 0, 'overall': len(opportunities)}
     for opp in opportunities:
+        # TODO: update
         result = api_worker.create_opportunity(opp)
         if result == 0:
             success += 1
-    dbl_log(f'Loaded opportunities to DB ({success}/{len(opportunities)})')
+    dbl_log(f'Loaded opportunities to DB ({worker_r})')

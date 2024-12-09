@@ -45,7 +45,7 @@ def create_opportunity(opportunity) -> int:
     headers = {
         "api_key": api_key
     }
-    json = {
+    json = {  # TODO: add link_cmp to opp compare (urllib)
         "name": opportunity['name'],
         "link": opportunity['link'],
         "provider_id": provider_id

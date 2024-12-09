@@ -11,6 +11,7 @@ def dbl_err(mes: str):
     _dbl_logger.error(mes)
 
 
+PARSER_JSON_DIR = "DBL/json"
 TEMP_MD_DESC_FILE_PATH = "DBL/rendered/dbl_rendered_.md"
 
 
