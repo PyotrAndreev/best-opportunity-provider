@@ -1,15 +1,8 @@
 from config import *
 
-from parser_Studyqa import allFormsJSON
-
-for card in allFormsJSON:
+def fill_studyqa_forms(card) -> None:
   link = card['link']
-  service = ChromeService(executable_path=ChromeDriverManager().install())
-  options = webdriver.ChromeOptions()
-  # options.add_argument("--headless")
-  driver = webdriver.Chrome(service=service, options=options)
   driver.get(link)
-  soupForm = BeautifulSoup(driver.page_source, "html.parser")
 
   values = []
   for atribute in card:

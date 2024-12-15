@@ -1,52 +1,55 @@
 from config import *
 
-start_time = time.time()
+def run() -> str:
+  start_time = time.time()
 
-url = 'https://yandex.ru/jobs/vacancies?text=стажёр'
+  json_file = open(PARSER_JSON_DIR + 'allVacancyCard_JSON_Yandex.json', 'a', encoding='utf-8')
 
-driver.get(url)
-soup = BeautifulSoup(driver.page_source, "html.parser")
+  url = 'https://yandex.ru/jobs/vacancies?text=стажёр'
 
-allVacancyCard_link = []
-for link in soup.findAll('a', class_='lc-jobs-vacancy-card__link'):
-  allVacancyCard_link.append('https://yandex.ru' + link.get('href'))
+  # Open the URL using Selenium WebDriver
+  driver.get(url)
+  soup = BeautifulSoup(driver.page_source, "html.parser")
 
-# allVacancyCard_link = allVacancyCard_link[:1]
+  # Collect links to all vacancy cards
+  allVacancyCard_link = []
+  for link in soup.findAll('a', class_='lc-jobs-vacancy-card__link'):
+      allVacancyCard_link.append('https://yandex.ru' + link.get('href'))
 
-json_file = open('../JSON_webs/allVacancyCard_JSON_Yandex.json', 'a', encoding='utf-8')
+  # Write the opening bracket for the JSON array
+  json_file.write("[")
 
-json_file.write("[")
-for num_link in range(len(allVacancyCard_link)):
-  link = allVacancyCard_link[num_link]
-  driver.get(link)
-  html_code = BeautifulSoup(driver.page_source, "html.parser")
-  question = f"Fill in the maximum number of fields in the json form: {example}. using this html code of the vacancy {html_code}. Also, be sure to find links to the vacancy and the mold and paste them into json. I want the data in the new JSON to be translated into Russian and rephrased so that they can be used as separate sentences. Send me only the code of this JSON."
+  # Iterate through all vacancy links and process them
+  for num_link in range(len(allVacancyCard_link)):
+      link = allVacancyCard_link[num_link]
+      driver.get(link)
 
-  completion = client.chat.completions.create(
-    model="nvidia/llama-3.1-nemotron-70b-instruct",
-    messages=[{"role":"user","content":question}],
-    temperature=0.1,
-    top_p=1,
-    max_tokens=8192,
-    stream=True
-  )
-  result = ''
-  for chunk in completion:
-    if chunk.choices[0].delta.content is not None:
-      result += str(chunk.choices[0].delta.content)
+      # Parse the page source
+      html_code = BeautifulSoup(driver.page_source, "html.parser")
 
-  start = -1
-  end = -1
-  for i in range(len(result)):
-    if(result[i] == '{' and start == -1):
-      start = i
-    if(result[i] == '}'):
-      end = i
-  
-  if(num_link != 0):
-    json_file.write(',\n')
-  json_file.write(result[start: end + 1])
-json_file.write("\n]")
+      # Formulate the question for GPT
+      question = (
+          f"Fill in the maximum number of fields in the json form: {example}. "
+          f"Using this html code of the vacancy {html_code}. "
+          "Also, be sure to find links to the vacancy and the mold and paste them into json. "
+          "I want the data in the new JSON to be translated into Russian and rephrased "
+          "so that they can be used as separate sentences. Send me only the code of this JSON."
+      )
 
-driver.close()  
-print("--- Work time: %s seconds ---" % (time.time() - start_time))
+      # Add a comma for separation if it's not the first element
+      if num_link != 0:
+          json_file.write(',\n')
+
+      # Write the response from GPT into the JSON file
+      json_file.write(question_to_gpt(question))
+
+  # Write the closing bracket for the JSON array
+  json_file.write("\n]")
+
+  # Close the browser and the file
+  driver.close()
+  json_file.close()
+
+  print("--- Work time: %s seconds ---" % (time.time() - start_time))
+
+  return 'allVacancyCard_JSON_Yandex.json'

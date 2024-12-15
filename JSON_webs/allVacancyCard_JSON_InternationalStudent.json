@@ -1,110 +1,58 @@
 [{
   "link": "https://www.internationalstudent.com/school-search/1604/usa/south-carolina/university-of-south-carolina/",
   "form_link": "https://www.internationalstudent.com/school-search/user/portableregister/id/1604/",
-  "name": "University of South Carolina",
-  "short_description": "A globally recognized, high-impact research university committed to a superior student experience and dedicated to innovation in learning, research and community engagement.",
-  "description": "Founded in 1801, the university offers more than 350 degree programs and is one of only 50 public universities to receive Carnegie Classifications for both top-tier research activity and community engagement. Home to 47 nationally ranked academic programs, including top-ranked programs in international business, sport science and the nation’s best honors college and distinguished programs in engineering, law, medicine, public health, the humanities and the arts, UofSC is helping to build healthier, more educated communities in South Carolina and around the world.",
-  "provider": "University of South Carolina",
-  "logo": "https://cdn.internationalstudent.com/assets/IS/images/logo/logo-horizontal.png",
+  "name": "Университет Южной Каролины",
+  "short_description": "Университет Южной Каролины - это глобально признанный, высокоэффективный исследовательский университет, который обеспечивает превосходный студенческий опыт и посвящен инновациям в обучении, исследованиях и общественной вовлеченности.",
+  "description": "Университет Южной Каролины - это глобально признанный, высокоэффективный исследовательский университет, который обеспечивает превосходный студенческий опыт и посвящен инновациям в обучении, исследованиях и общественной вовлеченности. Основанный в 1801 году, университет предлагает более 350 программ обучения и входит в число 50 публичных университетов, получивших классификацию Carnegie для высшего уровня исследовательской деятельности и общественной вовлеченности.",
+  "provider": "Университет Южной Каролины",
+  "logo": "/uploads/school-search/images/live/1604/logo.png",
   "requirements": [
-    {
-      "name": "Highest Degree Attained",
-      "description": "Select your highest degree attained."
-    },
-    {
-      "name": "Degree Sought",
-      "description": "Select the degree you are seeking."
-    },
-    {
-      "name": "Intended Study Field",
-      "description": "Select your intended study field."
-    },
-    {
-      "name": "Plan to Begin Studies",
-      "description": "Select when you plan to begin your studies."
-    },
-    {
-      "name": "How will you pay for your education?",
-      "description": "Select how you will pay for your education."
-    }
+    "Диплом о среднем образовании",
+    "Тесты на английский язык (TOEFL или IELTS)",
+    "Тесты на математические способности (SAT или ACT)"
   ],
   "advantages": [
-    {
-      "name": "International Accelerator Program",
-      "description": "The International Accelerator Program (IAP) provides exclusive benefits to international students, including a streamlined application process, dedicated counselor, and major/field of study guidance."
-    },
-    {
-      "name": "Pre-Arrival Guidance",
-      "description": "IAP students receive pre-arrival guidance, including visa interview help, prep webinars, and checklist assistance."
-    },
-    {
-      "name": "Campus Transition",
-      "description": "IAP students enjoy a smooth campus transition, with airport welcome, student and parent orientation, and cultural group outings."
-    },
-    {
-      "name": "Academic Support",
-      "description": "IAP students have access to classes tailored to their academic level, English-language and ESL help, and tutoring support."
-    },
-    {
-      "name": "Career Growth",
-      "description": "IAP students can participate in the Career Accelerator Program, receive internship assistance, and job search help."
-    }
+    "Высокоэффективный исследовательский университет",
+    "Превосходный студенческий опыт",
+    "Инновации в обучении, исследованиях и общественной вовлеченности"
   ],
   "target": [
-    {
-      "name": "International Students",
-      "description": "The University of South Carolina is committed to providing a superior student experience for international students."
-    }
+    "Студенты, ищущие высококачественное образование",
+    "Студенты, заинтересованные в исследованиях и инновациях"
   ],
   "discipline": [
-    {
-      "name": "Business",
-      "description": "The University of South Carolina offers top-ranked programs in international business."
-    },
-    {
-      "name": "Engineering",
-      "description": "The University of South Carolina offers distinguished programs in engineering."
-    },
-    {
-      "name": "Law",
-      "description": "The University of South Carolina offers a top-ranked law program."
-    },
-    {
-      "name": "Medicine",
-      "description": "The University of South Carolina offers a top-ranked medicine program."
-    },
-    {
-      "name": "Public Health",
-      "description": "The University of South Carolina offers a top-ranked public health program."
-    }
+    "Инженерия",
+    "Медицина",
+    "Право",
+    "Бизнес и менеджмент"
   ],
   "place": [
-    {
-      "name": "Columbia, South Carolina",
-      "description": "The University of South Carolina is located in Columbia, South Carolina, a vibrant city with a rich history and culture."
-    }
+    "Колумбия, Южная Каролина, США"
   ],
   "period_of_internship": "",
   "selection_stages": [
     {
-      "name": "Application Review",
-      "period": "Varies",
+      "name": "Подача заявления",
+      "period": "Январь - Май",
       "objectives": [
-        "Review of application materials, including transcripts, test scores, and letters of recommendation."
+        "Предоставление необходимой документации",
+        "Оплата регистрационного взноса"
       ]
     },
     {
-      "name": "Interviews",
-      "period": "Varies",
+      "name": "Экзамены и тесты",
+      "period": "Февраль - Июнь",
       "objectives": [
-        "Conduct interviews with selected applicants to assess their communication skills and fit with the program."
+        "Сдача тестов на английский язык (TOEFL или IELTS)",
+        "Сдача тестов на математические способности (SAT или ACT)"
       ]
     },
     {
-      "name": "Final Decision",
-      "period": "Varies",
+      "name": "Интервью и оценка",
+      "period": "Март - Июль",
       "objectives": [
-        "Make a final decision on the applicant's admission to the program."
+        "Участие в интервью с представителями университета",
+        "Оценка кандидатов на основе предоставленной информации"
       ]
     }
   ],
@@ -112,512 +60,15 @@
   "expenses": "",
   "additional": [
     {
-      "title": "International Accelerator Program",
-      "description": "The International Accelerator Program (IAP) provides exclusive benefits to international students, including a streamlined application process, dedicated counselor, and major/field of study guidance."
+      "title": "Университет Южной Каролины: международный акселератор",
+      "description": "Университет Южной Каролины предлагает международный акселератор для иностранных студентов, который обеспечивает упрощенный процесс подачи заявления, индивидуальную поддержку и многое другое."
     },
     {
-      "title": "Pre-Arrival Guidance",
-      "description": "IAP students receive pre-arrival guidance, including visa interview help, prep webinars, and checklist assistance."
-    },
-    {
-      "title": "Campus Transition",
-      "description": "IAP students enjoy a smooth campus transition, with airport welcome, student and parent orientation, and cultural group outings."
+      "title": "Университет Южной Каролины: город Колумбия",
+      "description": "Город Колумбия, Южная Каролина, является одним из лучших городов для студентов в США, с его богатой историей, культурными мероприятиями и современной инфраструктурой."
     }
   ],
-  "tags": [
-    "University of South Carolina",
-    "International Students",
-    "International Accelerator Program",
-    "Business",
-    "Engineering",
-    "Law",
-    "Medicine",
-    "Public Health"
-  ],
-  "form": {
-    "name": {
-      "type": "string",
-      "required": true,
-      "label": "Full Name"
-    },
-    "email": {
-      "type": "email",
-      "required": true,
-      "label": "Email"
-    },
-    "highest_degree_attained": {
-      "type": "select",
-      "required": true,
-      "label": "Highest Degree Attained",
-      "options": [
-        {
-          "value": "3",
-          "label": "Associate's Degree"
-        },
-        {
-          "value": "4",
-          "label": "Bachelor's Degree"
-        },
-        {
-          "value": "2",
-          "label": "Certificate Program"
-        },
-        {
-          "value": "1",
-          "label": "High School/Secondary School"
-        },
-        {
-          "value": "5",
-          "label": "Master's/Graduate Degree"
-        },
-        {
-          "value": "6",
-          "label": "Professional Degree"
-        }
-      ]
-    },
-    "degree_sought": {
-      "type": "select",
-      "required": true,
-      "label": "Degree Sought",
-      "options": [
-        {
-          "value": "63",
-          "label": "Bachelors / Undergraduate"
-        },
-        {
-          "value": "64",
-          "label": "Masters / Graduate"
-        }
-      ]
-    },
-    "intended_study_field": {
-      "type": "select",
-      "required": true,
-      "label": "Intended Study Field",
-      "options": [
-        {
-          "value": "135",
-          "label": "Accounting"
-        },
-        {
-          "value": "92",
-          "label": "Agriculture"
-        },
-        {
-          "value": "2",
-          "label": "Architecture & Design"
-        },
-        {
-          "value": "1",
-          "label": "Arts, Visual & Performing"
-        },
-        {
-          "value": "32",
-          "label": "Aviation"
-        },
-        {
-          "value": "3",
-          "label": "Biology/Life Sciences"
-        },
-        {
-          "value": "4",
-          "label": "Business/Management"
-        },
-        {
-          "value": "5",
-          "label": "Communications"
-        },
-        {
-          "value": "6",
-          "label": "Computer & Information Systems"
-        },
-        {
-          "value": "96",
-          "label": "Conservation & Preservation"
-        },
-        {
-          "value": "62",
-          "label": "Construction Trades"
-        },
-        {
-          "value": "97",
-          "label": "Creative Writing"
-        },
-        {
-          "value": "98",
-          "label": "Culinary Arts"
-        },
-        {
-          "value": "7",
-          "label": "Cultural Studies"
-        },
-        {
-          "value": "84",
-          "label": "Dental/Orthodontics"
-        },
-        {
-          "value": "136",
-          "label": "Digital Arts & Design"
-        },
-        {
-          "value": "100",
-          "label": "Economics"
-        },
-        {
-          "value": "8",
-          "label": "Education"
-        },
-        {
-          "value": "9",
-          "label": "Engineering"
-        },
-        {
-          "value": "10",
-          "label": "English Literature"
-        },
-        {
-          "value": "58",
-          "label": "ESL (English as a Second Language)"
-        },
-        {
-          "value": "12",
-          "label": "Fashion"
-        },
-        {
-          "value": "83",
-          "label": "Film/Motion Picture"
-        },
-        {
-          "value": "94",
-          "label": "Finance"
-        },
-        {
-          "value": "1991",
-          "label": "Game Design & Development"
-        },
-        {
-          "value": "85",
-          "label": "Graphic Design/Computer Animation"
-        },
-        {
-          "value": "14",
-          "label": "Health Professions"
-        },
-        {
-          "value": "144",
-          "label": "Hospitality"
-        },
-        {
-          "value": "111",
-          "label": "Journalism/Broadcasting"
-        },
-        {
-          "value": "112",
-          "label": "Languages/Linguistics"
-        },
-        {
-          "value": "15",
-          "label": "Law & Legal Studies"
-        },
-        {
-          "value": "63",
-          "label": "Leisure & Recreational Activities"
-        },
-        {
-          "value": "114",
-          "label": "Liberal Arts/Humanities"
-        },
-        {
-          "value": "17",
-          "label": "Marketing"
-        },
-        {
-          "value": "18",
-          "label": "Mathematics"
-        },
-        {
-          "value": "82",
-          "label": "Music/Recording Arts"
-        },
-        {
-          "value": "79",
-          "label": "Nursing"
-        },
-        {
-          "value": "27",
-          "label": "Other"
-        },
-        {
-          "value": "19",
-          "label": "Philosophy & Religion"
-        },
-        {
-          "value": "20",
-          "label": "Physical Sciences"
-        },
-        {
-          "value": "24",
-          "label": "Political Science/Social Science"
-        },
-        {
-          "value": "21",
-          "label": "Psychology"
-        },
-        {
-          "value": "22",
-          "label": "Public Administration"
-        },
-        {
-          "value": "23",
-          "label": "Science/Technology"
-        },
-        {
-          "value": "60",
-          "label": "Transportation/Logistics"
-        },
-        {
-          "value": "81",
-          "label": "Travel/Tourism"
-        },
-        {
-          "value": "139",
-          "label": "Web Design & Development"
-        }
-      ]
-    },
-    "plan_to_begin_studies": {
-      "type": "select",
-      "required": true,
-      "label": "Plan to Begin Studies",
-      "options": [
-        {
-          "value": "2024-12-03",
-          "label": "Dec 2024"
-        },
-        {
-          "value": "2025-01-03",
-          "label": "Jan 2025"
-        },
-        {
-          "value": "2025-02-03",
-          "label": "Feb 2025"
-        },
-        {
-          "value": "2025-03-03",
-          "label": "Mar 2025"
-        },
-        {
-          "value": "2025-04-03",
-          "label": "Apr 2025"
-        },
-        {
-          "value": "2025-05-03",
-          "label": "May 2025"
-        },
-        {
-          "value": "2025-06-03",
-          "label": "Jun 2025"
-        },
-        {
-          "value": "2025-07-03",
-          "label": "Jul 2025"
-        },
-        {
-          "value": "2025-08-03",
-          "label": "Aug 2025"
-        },
-        {
-          "value": "2025-09-03",
-          "label": "Sep 2025"
-        },
-        {
-          "value": "2025-10-03",
-          "label": "Oct 2025"
-        },
-        {
-          "value": "2025-11-03",
-          "label": "Nov 2025"
-        },
-        {
-          "value": "2025-12-03",
-          "label": "Dec 2025"
-        },
-        {
-          "value": "2026-01-03",
-          "label": "Jan 2026"
-        },
-        {
-          "value": "2026-02-03",
-          "label": "Feb 2026"
-        },
-        {
-          "value": "2026-03-03",
-          "label": "Mar 2026"
-        },
-        {
-          "value": "2026-04-03",
-          "label": "Apr 2026"
-        },
-        {
-          "value": "2026-05-03",
-          "label": "May 2026"
-        },
-        {
-          "value": "2026-06-03",
-          "label": "Jun 2026"
-        },
-        {
-          "value": "2026-07-03",
-          "label": "Jul 2026"
-        },
-        {
-          "value": "2026-08-03",
-          "label": "Aug 2026"
-        },
-        {
-          "value": "2026-09-03",
-          "label": "Sep 2026"
-        },
-        {
-          "value": "2026-10-03",
-          "label": "Oct 2026"
-        },
-        {
-          "value": "2026-11-03",
-          "label": "Nov 2026"
-        }
-      ]
-    },
-    "how_will_you_pay_for_your_education": {
-      "type": "select",
-      "required": true,
-      "label": "How will you pay for your education?",
-      "options": [
-        {
-          "value": "4",
-          "label": "I am sponsored by my government or other organization"
-        },
-        {
-          "value": "5",
-          "label": "I can pay, but would prefer to obtain scholarships/loans"
-        },
-        {
-          "value": "6",
-          "label": "I need a full scholarship/grant"
-        },
-        {
-          "value": "3",
-          "label": "My family and/or I will pay for my education"
-        }
-      ]
-    }
-  }
-},
-{
-  "link": "https://www.internationalstudent.com/school-search/3007/usa/missouri/a-t-still-university-of-health-sciences/",
-  "form_link": "https://www.internationalstudent.com/school-search/user/portableregister/id/3007/",
-  "name": "A T Still University of Health Sciences",
-  "short_description": "A T Still University of Health Sciences is a private, non-profit, postgraduate institution with a strong focus on healthcare education.",
-  "description": "A T Still University of Health Sciences is a private, non-profit, postgraduate institution with a strong focus on healthcare education. The university offers a range of programs in healthcare, including osteopathic medicine, physical therapy, occupational therapy, and more. With a campus located in Kirksville, Missouri, the university provides students with a unique blend of academic rigor and clinical experience.",
-  "provider": "A T Still University of Health Sciences",
-  "logo": "https://cdn.internationalstudent.com/assets/IS/images/logo/logo-horizontal.png",
-  "requirements": [
-    {
-      "name": "Bachelor's Degree",
-      "description": "Applicants must have a bachelor's degree from an accredited institution."
-    },
-    {
-      "name": "GPA",
-      "description": "A minimum GPA of 3.0 is required for most programs."
-    },
-    {
-      "name": "English Language Proficiency",
-      "description": "Applicants must demonstrate English language proficiency through TOEFL or IELTS scores."
-    }
-  ],
-  "advantages": [
-    {
-      "name": "Clinical Experience",
-      "description": "Students gain hands-on clinical experience through the university's partnerships with top healthcare organizations."
-    },
-    {
-      "name": "Interprofessional Education",
-      "description": "The university's curriculum emphasizes interprofessional education, preparing students to work effectively in healthcare teams."
-    },
-    {
-      "name": "State-of-the-Art Facilities",
-      "description": "The university's campus features state-of-the-art facilities, including simulation labs and clinical skills centers."
-    }
-  ],
-  "target": [
-    {
-      "name": "International Students",
-      "description": "The university welcomes international students and provides support services to help them succeed."
-    },
-    {
-      "name": "Working Professionals",
-      "description": "Many programs are designed for working professionals, offering flexible scheduling and online learning options."
-    }
-  ],
-  "discipline": [
-    {
-      "name": "Healthcare",
-      "description": "The university offers a range of healthcare programs, from osteopathic medicine to physical therapy."
-    }
-  ],
-  "place": [
-    {
-      "name": "Kirksville, Missouri",
-      "description": "The university's campus is located in Kirksville, Missouri, providing a unique blend of small-town charm and access to top healthcare organizations."
-    }
-  ],
-  "period_of_internship": "Varies by program",
-  "selection_stages": [
-    {
-      "name": "Application Review",
-      "period": "Ongoing",
-      "objectives": [
-        "Review of application materials, including transcripts and test scores."
-      ]
-    },
-    {
-      "name": "Interviews",
-      "period": "By invitation",
-      "objectives": [
-        "Assessment of communication skills and fit with the university's mission."
-      ]
-    },
-    {
-      "name": "Final Decision",
-      "period": "Varies by program",
-      "objectives": [
-        "Notification of admission decision, including any conditions or additional requirements."
-      ]
-    }
-  ],
-  "allowance": "Varies by program",
-  "expenses": "Varies by program",
-  "additional": [
-    {
-      "title": "Scholarships and Financial Aid",
-      "description": "The university offers a range of scholarships and financial aid options to support students."
-    },
-    {
-      "title": "Support Services",
-      "description": "The university provides support services, including academic advising and mental health resources."
-    },
-    {
-      "title": "Campus Life",
-      "description": "The university's campus features a range of amenities, including a fitness center and student lounge."
-    }
-  ],
-  "tags": [
-    "Healthcare Education",
-    "Postgraduate Programs",
-    "Private University",
-    "Non-Profit Institution"
-  ],
+  "tags": [],
   "form": {
     "name": {
       "type": "string",
@@ -629,29 +80,60 @@
       "required": true,
       "label": "Электронная почта"
     },
-    {
-      "name": "phone",
+    "phone": {
       "type": "tel",
       "required": true,
       "label": "Телефон"
     },
-    {
-      "name": "country",
+    "address": {
+      "type": "string",
+      "required": true,
+      "label": "Адрес"
+    },
+    "city": {
+      "type": "string",
+      "required": true,
+      "label": "Город"
+    },
+    "country": {
       "type": "string",
       "required": true,
       "label": "Страна"
     },
-    {
-      "name": "program",
+    "highest_degree": {
       "type": "string",
       "required": true,
-      "label": "Программа"
+      "label": "Высшее образование"
     },
-    {
-      "name": "start_date",
-      "type": "date",
+    "degree_sought": {
+      "type": "string",
       "required": true,
-      "label": "Дата начала"
+      "label": "Желаемая степень"
+    },
+    "intended_study_field": {
+      "type": "string",
+      "required": true,
+      "label": "Предполагаемая область обучения"
+    },
+    "begin_studies": {
+      "type": "string",
+      "required": true,
+      "label": "Планируемая дата начала обучения"
+    },
+    "financial_qualifier": {
+      "type": "string",
+      "required": true,
+      "label": "Как вы планируете оплачивать свое обучение?"
+    },
+    "verifycode": {
+      "type": "string",
+      "required": true,
+      "label": "Введите код с изображения"
+    },
+    "usage_agreement": {
+      "type": "boolean",
+      "required": true,
+      "label": "Соглашение об использовании"
     }
   }
 },
@@ -714,25 +196,204 @@
       "required": true,
       "label": ""
     },
+    ...
+  }
+},
+{
+  "link": "https://www.internationalstudent.com/school-search/2661/usa/california/academy-of-chinese-culture-and-health-sciences/",
+  "form_link": "https://www.internationalstudent.com/school-search/user/portableregister/id/2661/",
+  "name": "Academy of Chinese Culture and Health Sciences",
+  "short_description": "The Academy of Chinese Culture and Health Sciences (ACCHS) is a private, non-profit educational institution located in Oakland, California, USA. It offers a Master's degree program in Traditional Chinese Medicine (TCM) and a certificate program in Chinese Herbology.",
+  "description": "The Academy of Chinese Culture and Health Sciences (ACCHS) is a private, non-profit educational institution located in Oakland, California, USA. It offers a Master's degree program in Traditional Chinese Medicine (TCM) and a certificate program in Chinese Herbology. The institution is accredited by the Accreditation Commission for Acupuncture and Oriental Medicine (ACAOM). The Master's program in TCM is designed to provide students with a comprehensive education in the principles and practices of TCM, including acupuncture, Chinese herbal medicine, and tuina massage. The program is taught by experienced faculty who are licensed practitioners of TCM. The certificate program in Chinese Herbology is designed to provide students with a foundational understanding of Chinese herbal medicine and its application in clinical practice.",
+  "provider": "Academy of Chinese Culture and Health Sciences",
+  "logo": "https://www.internationalstudent.com/assets/IS/images/logo/logo-horizontal.png",
+  "requirements": [
     {
-      ... 
+      "name": "Bachelor's degree from an accredited institution",
+      "description": "Applicants must have a bachelor's degree from an accredited institution in any field."
+    },
+    {
+      "name": "Prerequisite courses in sciences",
+      "description": "Applicants must have completed prerequisite courses in sciences, including biology, chemistry, and physics."
+    },
+    {
+      "name": "English language proficiency",
+      "description": "Applicants whose native language is not English must demonstrate English language proficiency through TOEFL or IELTS scores."
+    }
+  ],
+  "advantages": [
+    {
+      "name": "Comprehensive education in TCM",
+      "description": "The Master's program in TCM provides students with a comprehensive education in the principles and practices of TCM."
+    },
+    {
+      "name": "Experienced faculty",
+      "description": "The program is taught by experienced faculty who are licensed practitioners of TCM."
+    },
+    {
+      "name": "Clinical training",
+      "description": "Students have the opportunity to gain clinical training in the institution's on-site clinic."
+    }
+  ],
+  "target": [
+    {
+      "name": "International students",
+      "description": "The institution welcomes international students and provides support for their academic and personal needs."
+    },
+    {
+      "name": "Students interested in TCM",
+      "description": "The institution is ideal for students who are interested in pursuing a career in Traditional Chinese Medicine."
+    }
+  ],
+  "discipline": [
+    {
+      "name": "Traditional Chinese Medicine",
+      "description": "The institution offers a Master's degree program in Traditional Chinese Medicine (TCM)."
+    }
+  ],
+  "place": [
+    {
+      "name": "Oakland, California, USA",
+      "description": "The institution is located in Oakland, California, USA, providing students with access to a diverse and vibrant city."
+    }
+  ],
+  "period_of_internship": "N/A",
+  "selection_stages": [
+    {
+      "name": "Application Review",
+      "period": "Ongoing",
+      "objectives": [
+        {
+          "name": "Review of application materials",
+          "description": "The institution reviews the applicant's academic and personal qualifications."
+        }
+      ]
+    },
+    {
+      "name": "Interview",
+      "period": "By invitation",
+      "objectives": [
+        {
+          "name": "Assessment of applicant's communication skills",
+          "description": "The institution assesses the applicant's communication skills and fit with the program."
+        }
+      ]
+    },
+    {
+      "name": "Notification of Admission",
+      "period": "Within 2 weeks of interview",
+      "objectives": [
+        {
+          "name": "Notification of admission decision",
+          "description": "The institution notifies the applicant of the admission decision."
+        }
+      ]
+    }
+  ],
+  "allowance": "N/A",
+  "expenses": "N/A",
+  "additional": [
+    {
+      "title": "Clinical Training",
+      "description": "Students have the opportunity to gain clinical training in the institution's on-site clinic."
+    },
+    {
+      "title": "Support for International Students",
+      "description": "The institution provides support for international students, including assistance with visa applications and cultural adaptation."
+    }
+  ],
+  "tags": [],
+  "form": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "label": "Full Name"
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "label": "Email"
+    },
+    "phone": {
+      "type": "tel",
+      "required": true,
+      "label": "Phone"
+    },
+    "country": {
+      "type": "string",
+      "required": true,
+      "label": "Country"
+    },
+    "city": {
+      "type": "string",
+      "required": true,
+      "label": "City"
+    },
+    "zip": {
+      "type": "string",
+      "required": true,
+      "label": "Zip"
+    },
+    "program": {
+      "type": "string",
+      "required": true,
+      "label": "Program of Interest"
+    },
+    "start_date": {
+      "type": "string",
+      "required": true,
+      "label": "Start Date"
+    },
+    "highest_degree": {
+      "type": "string",
+      "required": true,
+      "label": "Highest Degree Attained"
+    },
+    "degree_sought": {
+      "type": "string",
+      "required": true,
+      "label": "Degree Sought"
+    },
+    "study_field": {
+      "type": "string",
+      "required": true,
+      "label": "Intended Study Field"
+    },
+    "financial_qualifier": {
+      "type": "string",
+      "required": true,
+      "label": "How will you pay for your education?"
+    },
+    "verify_code": {
+      "type": "string",
+      "required": true,
+      "label": "Verify Code"
+    },
+    "usage_agreement": {
+      "type": "boolean",
+      "required": true,
+      "label": "Usage Agreement"
     }
   }
 },
 {
   "link": "",
   "form_link": "",
-  "name": "",
-  "short_description": "",
-  "description": "",
-  "provider": "",
+
+  "name": "Academy of Hair Design",
+  "short_description": "At The Academy of Hair Design each student is the focus of our attention. It is our strong desire to produce highly trained and motivated hair design and color professionals that are respected in the industry as desirable staff members at salons everywhere.",
+  "description": "At The Academy of Hair Design each student is the focus of our attention. It is our strong desire to produce highly trained and motivated hair design and color professionals that are respected in the industry as desirable staff members at salons everywhere.",
+  "provider": "Academy of Hair Design",
   "logo": "",
+
   "requirements": [],
   "advantages": [],
   "target": [],
   "discipline": [],
+
   "place": [],
   "period_of_internship": "",
+
   "selection_stages": [
     {
       "name": "",
@@ -750,8 +411,10 @@
       "objectives": []
     }
   ],
+
   "allowance": "",
   "expenses": "",
+
   "additional": [
     {
       "title": "",
@@ -766,7 +429,9 @@
       "description": ""
     }
   ],
+
   "tags": [],
+
   "form": {
     "name": {
       "type": "string",
@@ -778,93 +443,232 @@
       "required": true,
       "label": ""
     },
-    {
-      ... 
-    }
+    ...
   }
-}
-
-**Translated JSON with Russian rephrased sentences:**
-
+},
 {
-  "link": "https://www.internationalstudent.com/school-search/2792/usa/georgia/abraham-baldwin-agricultural-college/",
-  "form_link": "https://www.internationalstudent.com/school-search/user/portableregister/id/2792/",
-  "name": "Abraham Baldwin Agricultural College",
-  "short_description": "Abraham Baldwin Agricultural College - это колледж, который предлагает различные программы обучения.",
-  "description": "Abraham Baldwin Agricultural College - это колледж, который предлагает различные программы обучения, включая сельское хозяйство, лесное хозяйство и другие.",
-  "provider": "Abraham Baldwin Agricultural College",
+  "link": "https://www.internationalstudent.com/school-search/3581/usa/florida/academy-of-massage-therapy/",
+  "form_link": "https://www.internationalstudent.com/school-search/user/portableregister/id/3581/",
+  "name": "Academy of Massage Therapy",
+  "short_description": "Test this! test dsrgsgfsgfdg",
+  "description": "Test this! test dsrgsgfsgfdg",
+  "provider": "InternationalStudent.com",
   "logo": "https://cdn.internationalstudent.com/assets/IS/images/logo/logo-horizontal.png",
   "requirements": [
-    "Требуется заполнить форму заявки",
-    "Требуется предоставить документы",
-    "Требуется пройти собеседование"
+    {
+      "name": "Age",
+      "description": "18 years old and above"
+    },
+    {
+      "name": "Language",
+      "description": "English proficiency"
+    },
+    {
+      "name": "Education",
+      "description": "High school diploma or equivalent"
+    }
   ],
   "advantages": [
-    "Колледж предлагает различные программы обучения",
-    "Колледж имеет опыт в подготовке студентов",
-    "Колледж имеет хорошие условия для обучения"
+    {
+      "name": "Hands-on training",
+      "description": "Gain practical experience in massage therapy"
+    },
+    {
+      "name": "Small class sizes",
+      "description": "Personalized attention from instructors"
+    },
+    {
+      "name": "State-of-the-art facilities",
+      "description": "Learn in a modern and well-equipped environment"
+    }
   ],
   "target": [
-    "Студенты, заинтересованные в сельском хозяйстве",
-    "Студенты, заинтересованные в лесном хозяйстве",
-    "Студенты, заинтересованные в других программах"
+    {
+      "name": "International students",
+      "description": "From all over the world"
+    },
+    {
+      "name": "Career changers",
+      "description": "Looking to transition into a new field"
+    },
+    {
+      "name": "Individuals seeking personal growth",
+      "description": "Interested in holistic wellness"
+    }
   ],
   "discipline": [
-    "Сельское хозяйство",
-    "Лесное хозяйство",
-    "Другие программы"
+    {
+      "name": "Massage Therapy",
+      "description": "Specialize in various massage techniques"
+    },
+    {
+      "name": "Anatomy and Physiology",
+      "description": "Understand the human body"
+    },
+    {
+      "name": "Kinesiology",
+      "description": "Study movement and exercise"
+    }
   ],
   "place": [
-    "США",
-    "Грузия"
+    {
+      "name": "Jacksonville, Florida, USA",
+      "description": "Located in the southeastern United States"
+    }
   ],
-  "period_of_internship": "1 год",
+  "period_of_internship": "",
   "selection_stages": [
     {
-      "name": "Первый этап",
-      "period": "1 неделя",
+      "name": "Application Review",
+      "period": "1-2 weeks",
       "objectives": [
-        "Проверка документов",
-        "Проверка заявки"
+        "Review of application and supporting documents",
+        "Assessment of candidate's qualifications"
       ]
     },
     {
-      "name": "Второй этап",
-      "period": "2 недели",
+      "name": "Interview",
+      "period": "1-2 weeks",
       "objectives": [
-        "Собеседование",
-        "Проверка мотивации"
+        "Assessment of candidate's communication skills",
+        "Discussion of program details and expectations"
       ]
     },
     {
-      "name": "Третий этап",
-      "period": "3 недели",
+      "name": "Acceptance",
+      "period": "1 week",
       "objectives": [
-        "Проверка знаний",
-        "Проверка навыков"
+        "Notification of acceptance into the program",
+        "Provision of enrollment instructions"
       ]
     }
   ],
-  "allowance": "1000 долларов",
-  "expenses": "500 долларов",
+  "allowance": "",
+  "expenses": "",
   "additional": [
     {
-      "title": "Дополнительная информация",
-      "description": "Колледж предлагает различные программы обучения, включая сельское хозяйство, лесное хозяйство и другие."
+      "title": "Housing Assistance",
+      "description": "Help with finding accommodation in Jacksonville"
     },
     {
-      "title": "Дополнительная информация",
-      "description": "Колледж имеет опыт в подготовке студентов и имеет хорошие условия для обучения."
+      "title": "Career Services",
+      "description": "Support with job placement after graduation"
     },
     {
-      "title": "Дополнительная информация",
-      "description": "Колледж предлагает различные программы обучения, включая сельское хозяйство, лесное хозяйство и другие."
+      "title": "Alumni Network",
+      "description": "Connect with graduates and industry professionals"
+    }
+  ],
+  "tags": [],
+  "form": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "label": "Имя"
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "label": "Электронная почта"
+    },
+    "phone": {
+      "type": "string",
+      "required": true,
+      "label": "Телефон"
+    },
+    "country": {
+      "type": "string",
+      "required": true,
+      "label": "Страна"
+    },
+    "program": {
+      "type": "string",
+      "required": true,
+      "label": "Программа"
+    },
+    "start_date": {
+      "type": "string",
+      "required": true,
+      "label": "Дата начала"
+    },
+    "message": {
+      "type": "string",
+      "required": false,
+      "label": "Сообщение"
+    }
+  }
+},
+{
+  "link": "https://www.internationalstudent.com/school-search/3211/usa/pennsylvania/academy-of-vocal-arts/",
+  "form_link": "https://www.internationalstudent.com/school-search/user/portableregister/id/3211/",
+  "name": "Академия вокального искусства",
+  "short_description": "Академия вокального искусства - это престижное учебное заведение, расположенное в Филадельфии, штат Пенсильвания, США.",
+  "description": "Академия вокального искусства является ведущим учебным заведением в области вокального искусства, предлагающим студентам уникальную возможность получить профессиональное музыкальное образование.",
+  "provider": "Академия вокального искусства",
+  "logo": "https://cdn.internationalstudent.com/assets/IS/images/logo/logo-horizontal.png",
+  "requirements": [
+    "Для поступления в Академию вокального искусства необходимо предоставить документы, подтверждающие уровень владения английским языком.",
+    "Студенты должны иметь сильный вокальный талант и потенциал для развития в области вокального искусства."
+  ],
+  "advantages": [
+    "Уникальная возможность получить профессиональное музыкальное образование в престижной Академии вокального искусства.",
+    "Возможность изучать вокальное искусство в США, одной из ведущих стран в области музыкального образования."
+  ],
+  "target": [
+    "Студенты, заинтересованные в получении профессионального музыкального образования в области вокального искусства.",
+    "Те, кто стремится развить свой вокальный талант и стать профессиональными вокалистами."
+  ],
+  "discipline": [
+    "Вокальное искусство",
+    "Музыкальное образование"
+  ],
+  "place": [
+    "Филадельфия, штат Пенсильвания, США"
+  ],
+  "period_of_internship": "Академический год",
+  "selection_stages": [
+    {
+      "name": "Первый этап отбора",
+      "period": "Сентябрь - октябрь",
+      "objectives": [
+        "Предоставление документов, подтверждающих уровень владения английским языком.",
+        "Аудитация вокальных способностей"
+      ]
+    },
+    {
+      "name": "Второй этап отбора",
+      "period": "Ноябрь - декабрь",
+      "objectives": [
+        "Проведение личного собеседования с представителями Академии.",
+        "Оценка мотивации и потенциала студента"
+      ]
+    },
+    {
+      "name": "Третий этап отбора",
+      "period": "Январь - февраль",
+      "objectives": [
+        "Получение результатов аудитации и личного собеседования.",
+        "Принятие решения о зачислении в Академию"
+      ]
+    }
+  ],
+  "allowance": "Нет",
+  "expenses": "Студенты должны оплачивать все расходы, связанные с обучением и проживанием в США.",
+  "additional": [
+    {
+      "title": "Возможность получения стипендии",
+      "description": "Академия вокального искусства предлагает стипендии для талантливых студентов."
+    },
+    {
+      "title": "Уникальная возможность обучения у опытных преподавателей",
+      "description": "Преподаватели Академии вокального искусства - признанные эксперты в области вокального искусства."
     }
   ],
   "tags": [
-    "Сельское хозяйство",
-    "Лесное хозяйство",
-    "Другие программы"
+    "Вокальное искусство",
+    "Музыкальное образование",
+    "США",
+    "Академия вокального искусства"
   ],
   "form": {
     "name": {
@@ -892,689 +696,45 @@
       "required": true,
       "label": "Город"
     },
-    "program": {
+    "zip": {
       "type": "string",
       "required": true,
-      "label": "Программа обучения"
+      "label": "Почтовый индекс"
     },
-    "start_date": {
-      "type": "date",
-      "required": true,
-      "label": "Дата начала"
-    }
-  }
-},
-{
-  "link": "https://www.internationalstudent.com/school-search/2661/usa/california/academy-of-chinese-culture-and-health-sciences/",
-  "form_link": "https://www.internationalstudent.com/school-search/user/portableregister/id/2661/",
-  "name": "Academy of Chinese Culture and Health Sciences",
-  "short_description": "The Academy of Chinese Culture and Health Sciences (ACCHS) is a private, non-profit educational institution located in Oakland, California, USA. It offers various degree programs in Traditional Chinese Medicine (TCM) and other health-related fields.",
-  "description": "The Academy of Chinese Culture and Health Sciences (ACCHS) is a private, non-profit educational institution located in Oakland, California, USA. It offers various degree programs in Traditional Chinese Medicine (TCM) and other health-related fields. The academy's mission is to provide high-quality education and training in TCM and other health sciences, while promoting the integration of Eastern and Western healing arts.",
-  "provider": "Academy of Chinese Culture and Health Sciences",
-  "logo": "https://www.internationalstudent.com/assets/IS/images/logos/2661.png",
-  "requirements": [
-    {
-      "name": "High School Diploma or Equivalent",
-      "description": "Applicants must have a high school diploma or equivalent."
-    },
-    {
-      "name": "English Language Proficiency",
-      "description": "Applicants whose native language is not English must demonstrate English language proficiency through TOEFL or IELTS scores."
-    },
-    {
-      "name": "Prerequisite Courses",
-      "description": "Applicants must have completed prerequisite courses in biology, chemistry, and physics."
-    }
-  ],
-  "advantages": [
-    {
-      "name": "Holistic Education",
-      "description": "ACCHS offers a holistic education that integrates Eastern and Western healing arts."
-    },
-    {
-      "name": "Experienced Faculty",
-      "description": "The academy's faculty consists of experienced practitioners and educators in the field of TCM."
-    },
-    {
-      "name": "Clinical Training",
-      "description": "Students have access to clinical training at the academy's on-campus clinic."
-    }
-  ],
-  "target": [
-    {
-      "name": "International Students",
-      "description": "ACCHS welcomes international students from around the world."
-    },
-    {
-      "name": "Students Interested in TCM",
-      "description": "The academy is ideal for students interested in pursuing a career in Traditional Chinese Medicine."
-    }
-  ],
-  "discipline": [
-    {
-      "name": "Traditional Chinese Medicine",
-      "description": "ACCHS offers degree programs in TCM, including acupuncture and herbal medicine."
-    },
-    {
-      "name": "Health Sciences",
-      "description": "The academy also offers programs in other health-related fields, such as health education and research."
-    }
-  ],
-  "place": [
-    {
-      "name": "Oakland, California, USA",
-      "description": "The academy is located in Oakland, California, providing students with access to a diverse and vibrant city."
-    }
-  ],
-  "period_of_internship": "Varies depending on the program",
-  "selection_stages": [
-    {
-      "name": "Application Review",
-      "period": "Within 2 weeks of application submission",
-      "objectives": [
-        "Review of application materials, including transcripts and test scores",
-        "Assessment of applicant's qualifications and fit for the program"
-      ]
-    },
-    {
-      "name": "Interview",
-      "period": "Scheduled after application review",
-      "objectives": [
-        "Personal interview with the admissions committee",
-        "Assessment of applicant's communication skills and program fit"
-      ]
-    },
-    {
-      "name": "Notification of Acceptance",
-      "period": "Within 1 week of interview",
-      "objectives": [
-        "Notification of acceptance or denial",
-        "Provision of additional information for accepted students"
-      ]
-    }
-  ],
-  "allowance": "Varies depending on the program",
-  "expenses": "Estimated annual expenses: $20,000 - $30,000",
-  "additional": [
-    {
-      "title": "Scholarship Opportunities",
-      "description": "ACCHS offers various scholarships to qualified students, including international students."
-    },
-    {
-      "title": "Clinical Experience",
-      "description": "Students gain hands-on clinical experience at the academy's on-campus clinic."
-    },
-    {
-      "title": "Career Services",
-      "description": "The academy provides career counseling and job placement assistance to graduates."
-    }
-  ],
-  "tags": [
-    "Traditional Chinese Medicine",
-    "Acupuncture",
-    "Herbal Medicine",
-    "Health Sciences",
-    "Holistic Education"
-  ],
-  "form": {
-    "name": {
+    "highest_degree": {
       "type": "string",
       "required": true,
-      "label": "Имя"
+      "label": "Высшее образование"
     },
-    "email": {
-      "type": "email",
+    "degree_sought": {
+      "type": "string",
       "required": true,
-      "label": "Электронная почта"
+      "label": "Желаемая степень"
     },
-    {
-      "name": "phone",
-      "type": "tel",
+    "intended_study_field": {
+      "type": "string",
       "required": true,
-      "label": "Номер телефона"
+      "label": "Предмет изучения"
     },
-    {
-      "name": "country",
-      "type": "select",
+    "begin_studies": {
+      "type": "string",
       "required": true,
-      "label": "Страна",
-      "options": [
-        {
-          "value": "USA",
-          "label": "США"
-        },
-        {
-          "value": "Canada",
-          "label": "Канада"
-        },
-        {
-          "value": "China",
-          "label": "Китай"
-        }
-      ]
+      "label": "Планируемая дата начала обучения"
     },
-    {
-      "name": "program",
-      "type": "select",
+    "financial_qualifier": {
+      "type": "string",
       "required": true,
-      "label": "Программа",
-      "options": [
-        {
-          "value": "TCM",
-          "label": "Традиционная китайская медицина"
-        },
-        {
-          "value": "Health Sciences",
-          "label": "Здоровье и медицинские науки"
-        }
-      ]
+      "label": "Финансовое обеспечение"
     },
-    {
-      "name": "start_date",
-      "type": "select",
-      "required": true,
-      "label": "Дата начала",
-      "options": [
-        {
-          "value": "Fall 2024",
-          "label": "Осень 2024"
-        },
-        {
-          "value": "Spring 2025",
-          "label": "Весна 2025"
-        }
-      ]
-    },
-    {
-      "name": "highest_degree",
-      "type": "select",
-      "required": true,
-      "label": "Высшая степень",
-      "options": [
-        {
-          "value": "High School Diploma",
-          "label": "Диплом средней школы"
-        },
-        {
-          "value": "Bachelor's Degree",
-          "label": "Бакалавр"
-        }
-      ]
-    },
-    {
-      "name": "financial_qualifier",
-      "type": "select",
-      "required": true,
-      "label": "Финансовое положение",
-      "options": [
-        {
-          "value": "Self-funded",
-          "label": "Самофинансирование"
-        },
-        {
-          "value": "Scholarship",
-          "label": "Стипендия"
-        }
-      ]
-    },
-    {
-      "name": "verify_code",
-      "type": "text",
+    "verifycode": {
+      "type": "string",
       "required": true,
       "label": "Код подтверждения"
     },
-    {
-      "name": "usage_agreement",
-      "type": "checkbox",
+    "usage_agreement": {
+      "type": "boolean",
       "required": true,
       "label": "Соглашение об использовании"
-    }
-  }
-},
-{
-  "link": "https://www.internationalstudent.com/school-search/3873/usa/new-york/academy-of-cosmetology-and-esthetics-nyc/",
-  "form_link": "https://www.internationalstudent.com/school-search/user/portableregister/id/3873/",
-  
-  "name": "Academy of Cosmetology and Esthetics NYC",
-  "short_description": "The Academy NYC - A Paul Mitchell Partner School is no ordinary beauty school.",
-  "description": "The Academy NYC - A Paul Mitchell Partner School is no ordinary beauty school. Our teaching style is unique at Paul Mitchell and will provide you a beauty career which is not limited to a hair education. You will be educated in cosmetology, esthetics, nails, skin care, waxing and make up. We believe that education is an adventure and that the learning experience needs to be fun. When you tour any Paul Mitchell School campus, you'll notice something different. You'll experience a positive learning environment everywhere you look. The culture within every Paul Mitchell School campus inspires confidence and success. Our schools are learning communities that provide you with the opportunities to develop essential skills while you explore your talents, passion, and creativity. You will be well on your way to becoming a Paul Mitchell Professional Hair Stylist!",
-  "provider": "InternationalStudent.com",
-  "logo": "https://cdn.internationalstudent.com/assets/IS/images/logo/logo-horizontal.png",
-  
-  "requirements": [
-    "Age: 17+",
-    "High School Diploma or Equivalent",
-    "English Language Proficiency (if applicable)"
-  ],
-  "advantages": [
-    "Unique teaching style",
-    "Comprehensive beauty education",
-    "Positive learning environment",
-    "Opportunities for skill development and creativity"
-  ],
-  "target": [
-    "Individuals seeking a career in beauty and cosmetology",
-    "Those interested in esthetics, nails, skin care, waxing, and make up"
-  ],
-  "discipline": [
-    "Cosmetology",
-    "Esthetics",
-    "Nails",
-    "Skin Care",
-    "Waxing",
-    "Make Up"
-  ],
-  
-  "place": [
-    "New York, USA"
-  ],
-  "period_of_internship": "",
-  
-  "selection_stages": [
-    {
-      "name": "Application Review",
-      "period": "Ongoing",
-      "objectives": [
-        "Review of application and supporting documents",
-        "Assessment of candidate's qualifications and experience"
-      ]
-    },
-    {
-      "name": "Interview",
-      "period": "Scheduled upon application review",
-      "objectives": [
-        "Personal interview with the admissions team",
-        "Discussion of candidate's goals and motivations"
-      ]
-    },
-    {
-      "name": "Admissions Decision",
-      "period": "Within 1-2 weeks after interview",
-      "objectives": [
-        "Notification of admissions decision",
-        "Provision of enrollment instructions (if accepted)"
-      ]
-    }
-  ],
-  
-  "allowance": "",
-  "expenses": "",
-  
-  "additional": [
-    {
-      "title": "Scholarship Opportunities",
-      "description": "Available to qualified students; please inquire with the school for more information."
-    },
-    {
-      "title": "Housing Assistance",
-      "description": "The school can provide guidance on finding accommodation in New York City."
-    },
-    {
-      "title": "Career Services",
-      "description": "The school offers career counseling and job placement assistance to its graduates."
-    }
-  ],
-  
-  "tags": [
-    "Beauty School",
-    "Cosmetology",
-    "Esthetics",
-    "Nails",
-    "Skin Care",
-    "Waxing",
-    "Make Up"
-  ],
-  
-  "form": {
-    "name": {
-      "type": "string",
-      "required": true,
-      "label": "Full Name"
-    },
-    "email": {
-      "type": "email",
-      "required": true,
-      "label": "Email Address"
-    },
-    "phone": {
-      "type": "tel",
-      "required": true,
-      "label": "Phone Number"
-    },
-    "country": {
-      "type": "select",
-      "required": true,
-      "label": "Country of Origin",
-      "options": [
-        {"value": "USA", "label": "United States"},
-        {"value": "Canada", "label": "Canada"},
-        // Add more countries as needed
-      ]
-    },
-    "program": {
-      "type": "select",
-      "required": true,
-      "label": "Program of Interest",
-      "options": [
-        {"value": "cosmetology", "label": "Cosmetology"},
-        {"value": "esthetics", "label": "Esthetics"},
-        // Add more programs as needed
-      ]
-    },
-    "start_date": {
-      "type": "select",
-      "required": true,
-      "label": "Desired Start Date",
-      "options": [
-        {"value": "immediate", "label": "As soon as possible"},
-        {"value": "next_semester", "label": "Next semester"},
-        // Add more start dates as needed
-      ]
-    }
-  }
-}
-```
-
-**Russian Translation:**
-
-```json
-{
-  "link": "https://www.internationalstudent.com/school-search/3873/usa/new-york/academy-of-cosmetology-and-esthetics-nyc/",
-  "form_link": "https://www.internationalstudent.com/school-search/user/portableregister/id/3873/",
-  
-  "name": "Академия косметологии и эстетики Нью-Йорк",
-  "short_description": "Академия Нью-Йорк - партнерская школа Пол Митчелл, необычная школа красоты.",
-  "description": "Академия Нью-Йорк - партнерская школа Пол Митчелл, необычная школа красоты. Наш уникальный стиль обучения в Пол Митчелл обеспечит вам карьеру в области красоты, не ограниченную только обучением парикмахерскому делу. Вы будете обучены косметологии, эстетике, маникюру, уходу за кожей, депиляции и макияжу. Мы считаем, что образование - это приключение, и опыт обучения должен быть весёлым. Когда вы посещаете любой кампус школы Пол Митчелл, вы заметите что-то особенное. Вы испытаете положительную учебную среду повсюду. Культура в каждом кампусе школы Пол Митчелл вдохновляет уверенность и успех. Наши школы - это учебные сообщества, которые предоставляют вам возможности развивать необходимые навыки,探索 ваши таланты, страсть и креативность. Вы будете на пути к тому, чтобы стать профессиональным парикмахером Пол Митчелл!",
-  "provider": "InternationalStudent.com",
-  "logo": "https://cdn.internationalstudent.com/assets/IS/images/logo/logo-horizontal.png",
-  
-  "requirements": [
-    "Возраст: 17+",
-    "Диплом о среднем образовании или эквивалент",
-    "Профессиональный уровень владения английским языком (при необходимости)"
-  ],
-  "advantages": [
-    "Уникальный стиль обучения",
-    "Комплексное образование в области красоты",
-    "Положительная учебная среда",
-    "Возможности для развития навыков и творчества"
-  ],
-  "target": [
-    "Лица, стремящиеся к карьере в области красоты и косметологии",
-    "Те, кто интересуется эстетикой, маникюром, уходом за кожей, депиляцией и макияжем"
-  ],
-  "discipline": [
-    "Косметология",
-    "Эстетика",
-    "Маникюр",
-    "Уход за кожей",
-    "Депиляция",
-    "Макияж"
-  ],
-  
-  "place": [
-    "Нью-Йорк, США"
-  ],
-  "period_of_internship": "",
-  
-  "selection_stages": [
-    {
-      "name": "Обзор заявки",
-      "period": "Постоянно",
-      "objectives": [
-        "Обзор заявки и сопроводительных документов",
-        "Оценка квалификации и опыта кандидата"
-      ]
-    },
-    {
-      "name": "Интервью",
-      "period": "Запланировано после обзора заявки",
-      "objectives": [
-        "Личное интервью с командой приема",
-        "Обсуждение целей и мотивации кандидата"
-      ]
-    },
-    {
-      "name": "Решение о приеме",
-      "period": "В течение 1-2 недель после интервью",
-      "objectives": [
-        "Уведомление о решении о приеме",
-        "Предоставление инструкций по зачислению (при условии зачисления)"
-      ]
-    }
-  ],
-  
-  "allowance": "",
-  "expenses": "",
-  
-  "additional": [
-    {
-      "title": "Возможности получения стипендии",
-      "description": "Доступны для квалифицированных студентов; пожалуйста, обратитесь в школу за более подробной информацией."
-    },
-    {
-      "title": "Помощь в поиске жилья",
-      "description": "Школа может предоставить рекомендации по поиску жилья в Нью-Йорке."
-    },
-    {
-      "title": "Служба карьерного развития",
-      "description": "Школа предлагает консультации по карьерному развитию и помощь в трудоустройстве выпускникам."
-    }
-  ],
-  
-  "tags": [
-    "Школа красоты",
-    "Косметология",
-    "Эстетика",
-    "Маникюр",
-    "Уход за кожей",
-    "Депиляция",
-    "Макияж"
-  ],
-  
-  "form": {
-    "name": {
-      "type": "string",
-      "required": true,
-      "label": "Полное имя"
-    },
-    "email": {
-      "type": "email",
-      "required": true,
-      "label": "Адрес электронной почты"
-    },
-    "phone": {
-      "type": "tel",
-      "required": true,
-      "label": "Номер телефона"
-    },
-    "country": {
-      "type": "select",
-      "required": true,
-      "label": "Страна происхождения",
-      "options": [
-        {"value": "USA", "label": "Соединенные Штаты"},
-        {"value": "Canada", "label": "Канада"},
-        // Добавьте больше стран по мере необходимости
-      ]
-    },
-    "program": {
-      "type": "select",
-      "required": true,
-      "label": "Программа, представляющая интерес",
-      "options": [
-        {"value": "cosmetology", "label": "Косметология"},
-        {"value": "esthetics", "label": "Эстетика"},
-        // Добавьте больше программ по мере необходимости
-      ]
-    },
-    "start_date": {
-      "type": "select",
-      "required": true,
-      "label": "Желаемая дата начала",
-      "options": [
-        {"value": "immediate", "label": "Как можно скорее"},
-        {"value": "next_semester", "label": "Следующий семестр"},
-        // Добавьте больше дат начала по мере необходимости
-      ]
-    }
-  }
-},
-{
-  "link": "",
-  "form_link": "",
-
-  "name": "Academy of Hair Design",
-  "short_description": "At The Academy of Hair Design each student is the focus of our attention. It is our strong desire to produce highly trained and motivated hair design and color professionals that are respected in the industry as desirable staff members at salons everywhere.",
-  "description": "At The Academy of Hair Design each student is the focus of our attention. It is our strong desire to produce highly trained and motivated hair design and color professionals that are respected in the industry as desirable staff members at salons everywhere.",
-  "provider": "Academy of Hair Design",
-  "logo": "",
-
-  "requirements": [
-    {
-      "name": "Age",
-      "description": "18 years old"
-    },
-    {
-      "name": "Language",
-      "description": "English"
-    },
-    {
-      "name": "Education",
-      "description": "High School Diploma"
-    }
-  ],
-  "advantages": [
-    {
-      "name": "Hands-on training",
-      "description": "Students receive hands-on training in a salon-like environment."
-    },
-    {
-      "name": "Experienced instructors",
-      "description": "Instructors have years of experience in the industry."
-    },
-    {
-      "name": "Job placement assistance",
-      "description": "The academy provides job placement assistance to graduates."
-    }
-  ],
-  "target": [
-    {
-      "name": "International students",
-      "description": "Students from around the world are welcome to apply."
-    },
-    {
-      "name": "Career changers",
-      "description": "Individuals looking to change careers can benefit from the program."
-    }
-  ],
-  "discipline": [
-    {
-      "name": "Cosmetology",
-      "description": "The academy offers a cosmetology program."
-    }
-  ],
-
-  "place": [
-    {
-      "name": "Oklahoma City, Oklahoma, USA"
-    }
-  ],
-  "period_of_internship": "",
-
-  "selection_stages": [
-    {
-      "name": "Application",
-      "period": "Ongoing",
-      "objectives": [
-        {
-          "name": "Submit application",
-          "description": "Submit application with required documents."
-        }
-      ]
-    },
-    {
-      "name": "Interview",
-      "period": "After application submission",
-      "objectives": [
-        {
-          "name": "Conduct interview",
-          "description": "Conduct interview with the admissions team."
-        }
-      ]
-    },
-    {
-      "name": "Admission decision",
-      "period": "After interview",
-      "objectives": [
-        {
-          "name": "Receive admission decision",
-          "description": "Receive admission decision from the academy."
-        }
-      ]
-    }
-  ],
-
-  "allowance": "",
-  "expenses": "",
-
-  "additional": [
-    {
-      "title": "Scholarships available",
-      "description": "The academy offers scholarships to eligible students."
-    },
-    {
-      "title": "Housing assistance",
-      "description": "The academy provides housing assistance to international students."
-    }
-  ],
-
-  "tags": [],
-
-  "form": {
-    "name": {
-      "type": "string",
-      "required": true,
-      "label": "Full Name"
-    },
-    "email": {
-      "type": "email",
-      "required": true,
-      "label": "Email"
-    },
-    {
-      "name": "phone",
-      "type": "tel",
-      "required": true,
-      "label": "Phone Number"
-    },
-    {
-      "name": "country",
-      "type": "select",
-      "required": true,
-      "label": "Country",
-      "options": [
-        {
-          "value": "USA",
-          "label": "USA"
-        },
-        {
-          "value": "Canada",
-          "label": "Canada"
-        }
-      ]
-    },
-    {
-      "name": "program",
-      "type": "select",
-      "required": true,
-      "label": "Program",
-      "options": [
-        {
-          "value": "Cosmetology",
-          "label": "Cosmetology"
-        }
-      ]
     }
   }
 }
