@@ -1,0 +1,741 @@
+[{
+  "link": "https://www.internationalstudent.com/school-search/1604/usa/south-carolina/university-of-south-carolina/",
+  "form_link": "https://www.internationalstudent.com/school-search/user/portableregister/id/1604/",
+  "name": "Университет Южной Каролины",
+  "short_description": "Университет Южной Каролины - это глобально признанный, высокоэффективный исследовательский университет, который обеспечивает превосходный студенческий опыт и посвящен инновациям в обучении, исследованиях и общественной вовлеченности.",
+  "description": "Университет Южной Каролины - это глобально признанный, высокоэффективный исследовательский университет, который обеспечивает превосходный студенческий опыт и посвящен инновациям в обучении, исследованиях и общественной вовлеченности. Основанный в 1801 году, университет предлагает более 350 программ обучения и входит в число 50 публичных университетов, получивших классификацию Carnegie для высшего уровня исследовательской деятельности и общественной вовлеченности.",
+  "provider": "Университет Южной Каролины",
+  "logo": "/uploads/school-search/images/live/1604/logo.png",
+  "requirements": [
+    "Диплом о среднем образовании",
+    "Тесты на английский язык (TOEFL или IELTS)",
+    "Тесты на математические способности (SAT или ACT)"
+  ],
+  "advantages": [
+    "Высокоэффективный исследовательский университет",
+    "Превосходный студенческий опыт",
+    "Инновации в обучении, исследованиях и общественной вовлеченности"
+  ],
+  "target": [
+    "Студенты, ищущие высококачественное образование",
+    "Студенты, заинтересованные в исследованиях и инновациях"
+  ],
+  "discipline": [
+    "Инженерия",
+    "Медицина",
+    "Право",
+    "Бизнес и менеджмент"
+  ],
+  "place": [
+    "Колумбия, Южная Каролина, США"
+  ],
+  "period_of_internship": "",
+  "selection_stages": [
+    {
+      "name": "Подача заявления",
+      "period": "Январь - Май",
+      "objectives": [
+        "Предоставление необходимой документации",
+        "Оплата регистрационного взноса"
+      ]
+    },
+    {
+      "name": "Экзамены и тесты",
+      "period": "Февраль - Июнь",
+      "objectives": [
+        "Сдача тестов на английский язык (TOEFL или IELTS)",
+        "Сдача тестов на математические способности (SAT или ACT)"
+      ]
+    },
+    {
+      "name": "Интервью и оценка",
+      "period": "Март - Июль",
+      "objectives": [
+        "Участие в интервью с представителями университета",
+        "Оценка кандидатов на основе предоставленной информации"
+      ]
+    }
+  ],
+  "allowance": "",
+  "expenses": "",
+  "additional": [
+    {
+      "title": "Университет Южной Каролины: международный акселератор",
+      "description": "Университет Южной Каролины предлагает международный акселератор для иностранных студентов, который обеспечивает упрощенный процесс подачи заявления, индивидуальную поддержку и многое другое."
+    },
+    {
+      "title": "Университет Южной Каролины: город Колумбия",
+      "description": "Город Колумбия, Южная Каролина, является одним из лучших городов для студентов в США, с его богатой историей, культурными мероприятиями и современной инфраструктурой."
+    }
+  ],
+  "tags": [],
+  "form": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "label": "Имя"
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "label": "Электронная почта"
+    },
+    "phone": {
+      "type": "tel",
+      "required": true,
+      "label": "Телефон"
+    },
+    "address": {
+      "type": "string",
+      "required": true,
+      "label": "Адрес"
+    },
+    "city": {
+      "type": "string",
+      "required": true,
+      "label": "Город"
+    },
+    "country": {
+      "type": "string",
+      "required": true,
+      "label": "Страна"
+    },
+    "highest_degree": {
+      "type": "string",
+      "required": true,
+      "label": "Высшее образование"
+    },
+    "degree_sought": {
+      "type": "string",
+      "required": true,
+      "label": "Желаемая степень"
+    },
+    "intended_study_field": {
+      "type": "string",
+      "required": true,
+      "label": "Предполагаемая область обучения"
+    },
+    "begin_studies": {
+      "type": "string",
+      "required": true,
+      "label": "Планируемая дата начала обучения"
+    },
+    "financial_qualifier": {
+      "type": "string",
+      "required": true,
+      "label": "Как вы планируете оплачивать свое обучение?"
+    },
+    "verifycode": {
+      "type": "string",
+      "required": true,
+      "label": "Введите код с изображения"
+    },
+    "usage_agreement": {
+      "type": "boolean",
+      "required": true,
+      "label": "Соглашение об использовании"
+    }
+  }
+},
+{
+  "link": "",
+  "form_link": "",
+  "name": "Abilene Christian University",
+  "short_description": "",
+  "description": "",
+  "provider": "",
+  "logo": "",
+  "requirements": [],
+  "advantages": [],
+  "target": [],
+  "discipline": [],
+  "place": [],
+  "period_of_internship": "",
+  "selection_stages": [
+    {
+      "name": "",
+      "period": "",
+      "objectives": []
+    },
+    {
+      "name": "",
+      "period": "",
+      "objectives": []
+    },
+    {
+      "name": "",
+      "period": "",
+      "objectives": []
+    }
+  ],
+  "allowance": "",
+  "expenses": "",
+  "additional": [
+    {
+      "title": "",
+      "description": ""
+    },
+    {
+      "title": "",
+      "description": ""
+    },
+    {
+      "title": "",
+      "description": ""
+    }
+  ],
+  "tags": [],
+  "form": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "label": ""
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "label": ""
+    },
+    ...
+  }
+},
+{
+  "link": "https://www.internationalstudent.com/school-search/2661/usa/california/academy-of-chinese-culture-and-health-sciences/",
+  "form_link": "https://www.internationalstudent.com/school-search/user/portableregister/id/2661/",
+  "name": "Academy of Chinese Culture and Health Sciences",
+  "short_description": "The Academy of Chinese Culture and Health Sciences (ACCHS) is a private, non-profit educational institution located in Oakland, California, USA. It offers a Master's degree program in Traditional Chinese Medicine (TCM) and a certificate program in Chinese Herbology.",
+  "description": "The Academy of Chinese Culture and Health Sciences (ACCHS) is a private, non-profit educational institution located in Oakland, California, USA. It offers a Master's degree program in Traditional Chinese Medicine (TCM) and a certificate program in Chinese Herbology. The institution is accredited by the Accreditation Commission for Acupuncture and Oriental Medicine (ACAOM). The Master's program in TCM is designed to provide students with a comprehensive education in the principles and practices of TCM, including acupuncture, Chinese herbal medicine, and tuina massage. The program is taught by experienced faculty who are licensed practitioners of TCM. The certificate program in Chinese Herbology is designed to provide students with a foundational understanding of Chinese herbal medicine and its application in clinical practice.",
+  "provider": "Academy of Chinese Culture and Health Sciences",
+  "logo": "https://www.internationalstudent.com/assets/IS/images/logo/logo-horizontal.png",
+  "requirements": [
+    {
+      "name": "Bachelor's degree from an accredited institution",
+      "description": "Applicants must have a bachelor's degree from an accredited institution in any field."
+    },
+    {
+      "name": "Prerequisite courses in sciences",
+      "description": "Applicants must have completed prerequisite courses in sciences, including biology, chemistry, and physics."
+    },
+    {
+      "name": "English language proficiency",
+      "description": "Applicants whose native language is not English must demonstrate English language proficiency through TOEFL or IELTS scores."
+    }
+  ],
+  "advantages": [
+    {
+      "name": "Comprehensive education in TCM",
+      "description": "The Master's program in TCM provides students with a comprehensive education in the principles and practices of TCM."
+    },
+    {
+      "name": "Experienced faculty",
+      "description": "The program is taught by experienced faculty who are licensed practitioners of TCM."
+    },
+    {
+      "name": "Clinical training",
+      "description": "Students have the opportunity to gain clinical training in the institution's on-site clinic."
+    }
+  ],
+  "target": [
+    {
+      "name": "International students",
+      "description": "The institution welcomes international students and provides support for their academic and personal needs."
+    },
+    {
+      "name": "Students interested in TCM",
+      "description": "The institution is ideal for students who are interested in pursuing a career in Traditional Chinese Medicine."
+    }
+  ],
+  "discipline": [
+    {
+      "name": "Traditional Chinese Medicine",
+      "description": "The institution offers a Master's degree program in Traditional Chinese Medicine (TCM)."
+    }
+  ],
+  "place": [
+    {
+      "name": "Oakland, California, USA",
+      "description": "The institution is located in Oakland, California, USA, providing students with access to a diverse and vibrant city."
+    }
+  ],
+  "period_of_internship": "N/A",
+  "selection_stages": [
+    {
+      "name": "Application Review",
+      "period": "Ongoing",
+      "objectives": [
+        {
+          "name": "Review of application materials",
+          "description": "The institution reviews the applicant's academic and personal qualifications."
+        }
+      ]
+    },
+    {
+      "name": "Interview",
+      "period": "By invitation",
+      "objectives": [
+        {
+          "name": "Assessment of applicant's communication skills",
+          "description": "The institution assesses the applicant's communication skills and fit with the program."
+        }
+      ]
+    },
+    {
+      "name": "Notification of Admission",
+      "period": "Within 2 weeks of interview",
+      "objectives": [
+        {
+          "name": "Notification of admission decision",
+          "description": "The institution notifies the applicant of the admission decision."
+        }
+      ]
+    }
+  ],
+  "allowance": "N/A",
+  "expenses": "N/A",
+  "additional": [
+    {
+      "title": "Clinical Training",
+      "description": "Students have the opportunity to gain clinical training in the institution's on-site clinic."
+    },
+    {
+      "title": "Support for International Students",
+      "description": "The institution provides support for international students, including assistance with visa applications and cultural adaptation."
+    }
+  ],
+  "tags": [],
+  "form": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "label": "Full Name"
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "label": "Email"
+    },
+    "phone": {
+      "type": "tel",
+      "required": true,
+      "label": "Phone"
+    },
+    "country": {
+      "type": "string",
+      "required": true,
+      "label": "Country"
+    },
+    "city": {
+      "type": "string",
+      "required": true,
+      "label": "City"
+    },
+    "zip": {
+      "type": "string",
+      "required": true,
+      "label": "Zip"
+    },
+    "program": {
+      "type": "string",
+      "required": true,
+      "label": "Program of Interest"
+    },
+    "start_date": {
+      "type": "string",
+      "required": true,
+      "label": "Start Date"
+    },
+    "highest_degree": {
+      "type": "string",
+      "required": true,
+      "label": "Highest Degree Attained"
+    },
+    "degree_sought": {
+      "type": "string",
+      "required": true,
+      "label": "Degree Sought"
+    },
+    "study_field": {
+      "type": "string",
+      "required": true,
+      "label": "Intended Study Field"
+    },
+    "financial_qualifier": {
+      "type": "string",
+      "required": true,
+      "label": "How will you pay for your education?"
+    },
+    "verify_code": {
+      "type": "string",
+      "required": true,
+      "label": "Verify Code"
+    },
+    "usage_agreement": {
+      "type": "boolean",
+      "required": true,
+      "label": "Usage Agreement"
+    }
+  }
+},
+{
+  "link": "",
+  "form_link": "",
+
+  "name": "Academy of Hair Design",
+  "short_description": "At The Academy of Hair Design each student is the focus of our attention. It is our strong desire to produce highly trained and motivated hair design and color professionals that are respected in the industry as desirable staff members at salons everywhere.",
+  "description": "At The Academy of Hair Design each student is the focus of our attention. It is our strong desire to produce highly trained and motivated hair design and color professionals that are respected in the industry as desirable staff members at salons everywhere.",
+  "provider": "Academy of Hair Design",
+  "logo": "",
+
+  "requirements": [],
+  "advantages": [],
+  "target": [],
+  "discipline": [],
+
+  "place": [],
+  "period_of_internship": "",
+
+  "selection_stages": [
+    {
+      "name": "",
+      "period": "",
+      "objectives": []
+    },
+    {
+      "name": "",
+      "period": "",
+      "objectives": []
+    },
+    {
+      "name": "",
+      "period": "",
+      "objectives": []
+    }
+  ],
+
+  "allowance": "",
+  "expenses": "",
+
+  "additional": [
+    {
+      "title": "",
+      "description": ""
+    },
+    {
+      "title": "",
+      "description": ""
+    },
+    {
+      "title": "",
+      "description": ""
+    }
+  ],
+
+  "tags": [],
+
+  "form": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "label": ""
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "label": ""
+    },
+    ...
+  }
+},
+{
+  "link": "https://www.internationalstudent.com/school-search/3581/usa/florida/academy-of-massage-therapy/",
+  "form_link": "https://www.internationalstudent.com/school-search/user/portableregister/id/3581/",
+  "name": "Academy of Massage Therapy",
+  "short_description": "Test this! test dsrgsgfsgfdg",
+  "description": "Test this! test dsrgsgfsgfdg",
+  "provider": "InternationalStudent.com",
+  "logo": "https://cdn.internationalstudent.com/assets/IS/images/logo/logo-horizontal.png",
+  "requirements": [
+    {
+      "name": "Age",
+      "description": "18 years old and above"
+    },
+    {
+      "name": "Language",
+      "description": "English proficiency"
+    },
+    {
+      "name": "Education",
+      "description": "High school diploma or equivalent"
+    }
+  ],
+  "advantages": [
+    {
+      "name": "Hands-on training",
+      "description": "Gain practical experience in massage therapy"
+    },
+    {
+      "name": "Small class sizes",
+      "description": "Personalized attention from instructors"
+    },
+    {
+      "name": "State-of-the-art facilities",
+      "description": "Learn in a modern and well-equipped environment"
+    }
+  ],
+  "target": [
+    {
+      "name": "International students",
+      "description": "From all over the world"
+    },
+    {
+      "name": "Career changers",
+      "description": "Looking to transition into a new field"
+    },
+    {
+      "name": "Individuals seeking personal growth",
+      "description": "Interested in holistic wellness"
+    }
+  ],
+  "discipline": [
+    {
+      "name": "Massage Therapy",
+      "description": "Specialize in various massage techniques"
+    },
+    {
+      "name": "Anatomy and Physiology",
+      "description": "Understand the human body"
+    },
+    {
+      "name": "Kinesiology",
+      "description": "Study movement and exercise"
+    }
+  ],
+  "place": [
+    {
+      "name": "Jacksonville, Florida, USA",
+      "description": "Located in the southeastern United States"
+    }
+  ],
+  "period_of_internship": "",
+  "selection_stages": [
+    {
+      "name": "Application Review",
+      "period": "1-2 weeks",
+      "objectives": [
+        "Review of application and supporting documents",
+        "Assessment of candidate's qualifications"
+      ]
+    },
+    {
+      "name": "Interview",
+      "period": "1-2 weeks",
+      "objectives": [
+        "Assessment of candidate's communication skills",
+        "Discussion of program details and expectations"
+      ]
+    },
+    {
+      "name": "Acceptance",
+      "period": "1 week",
+      "objectives": [
+        "Notification of acceptance into the program",
+        "Provision of enrollment instructions"
+      ]
+    }
+  ],
+  "allowance": "",
+  "expenses": "",
+  "additional": [
+    {
+      "title": "Housing Assistance",
+      "description": "Help with finding accommodation in Jacksonville"
+    },
+    {
+      "title": "Career Services",
+      "description": "Support with job placement after graduation"
+    },
+    {
+      "title": "Alumni Network",
+      "description": "Connect with graduates and industry professionals"
+    }
+  ],
+  "tags": [],
+  "form": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "label": "Имя"
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "label": "Электронная почта"
+    },
+    "phone": {
+      "type": "string",
+      "required": true,
+      "label": "Телефон"
+    },
+    "country": {
+      "type": "string",
+      "required": true,
+      "label": "Страна"
+    },
+    "program": {
+      "type": "string",
+      "required": true,
+      "label": "Программа"
+    },
+    "start_date": {
+      "type": "string",
+      "required": true,
+      "label": "Дата начала"
+    },
+    "message": {
+      "type": "string",
+      "required": false,
+      "label": "Сообщение"
+    }
+  }
+},
+{
+  "link": "https://www.internationalstudent.com/school-search/3211/usa/pennsylvania/academy-of-vocal-arts/",
+  "form_link": "https://www.internationalstudent.com/school-search/user/portableregister/id/3211/",
+  "name": "Академия вокального искусства",
+  "short_description": "Академия вокального искусства - это престижное учебное заведение, расположенное в Филадельфии, штат Пенсильвания, США.",
+  "description": "Академия вокального искусства является ведущим учебным заведением в области вокального искусства, предлагающим студентам уникальную возможность получить профессиональное музыкальное образование.",
+  "provider": "Академия вокального искусства",
+  "logo": "https://cdn.internationalstudent.com/assets/IS/images/logo/logo-horizontal.png",
+  "requirements": [
+    "Для поступления в Академию вокального искусства необходимо предоставить документы, подтверждающие уровень владения английским языком.",
+    "Студенты должны иметь сильный вокальный талант и потенциал для развития в области вокального искусства."
+  ],
+  "advantages": [
+    "Уникальная возможность получить профессиональное музыкальное образование в престижной Академии вокального искусства.",
+    "Возможность изучать вокальное искусство в США, одной из ведущих стран в области музыкального образования."
+  ],
+  "target": [
+    "Студенты, заинтересованные в получении профессионального музыкального образования в области вокального искусства.",
+    "Те, кто стремится развить свой вокальный талант и стать профессиональными вокалистами."
+  ],
+  "discipline": [
+    "Вокальное искусство",
+    "Музыкальное образование"
+  ],
+  "place": [
+    "Филадельфия, штат Пенсильвания, США"
+  ],
+  "period_of_internship": "Академический год",
+  "selection_stages": [
+    {
+      "name": "Первый этап отбора",
+      "period": "Сентябрь - октябрь",
+      "objectives": [
+        "Предоставление документов, подтверждающих уровень владения английским языком.",
+        "Аудитация вокальных способностей"
+      ]
+    },
+    {
+      "name": "Второй этап отбора",
+      "period": "Ноябрь - декабрь",
+      "objectives": [
+        "Проведение личного собеседования с представителями Академии.",
+        "Оценка мотивации и потенциала студента"
+      ]
+    },
+    {
+      "name": "Третий этап отбора",
+      "period": "Январь - февраль",
+      "objectives": [
+        "Получение результатов аудитации и личного собеседования.",
+        "Принятие решения о зачислении в Академию"
+      ]
+    }
+  ],
+  "allowance": "Нет",
+  "expenses": "Студенты должны оплачивать все расходы, связанные с обучением и проживанием в США.",
+  "additional": [
+    {
+      "title": "Возможность получения стипендии",
+      "description": "Академия вокального искусства предлагает стипендии для талантливых студентов."
+    },
+    {
+      "title": "Уникальная возможность обучения у опытных преподавателей",
+      "description": "Преподаватели Академии вокального искусства - признанные эксперты в области вокального искусства."
+    }
+  ],
+  "tags": [
+    "Вокальное искусство",
+    "Музыкальное образование",
+    "США",
+    "Академия вокального искусства"
+  ],
+  "form": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "label": "Имя"
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "label": "Электронная почта"
+    },
+    "phone": {
+      "type": "tel",
+      "required": true,
+      "label": "Телефон"
+    },
+    "country": {
+      "type": "string",
+      "required": true,
+      "label": "Страна"
+    },
+    "city": {
+      "type": "string",
+      "required": true,
+      "label": "Город"
+    },
+    "zip": {
+      "type": "string",
+      "required": true,
+      "label": "Почтовый индекс"
+    },
+    "highest_degree": {
+      "type": "string",
+      "required": true,
+      "label": "Высшее образование"
+    },
+    "degree_sought": {
+      "type": "string",
+      "required": true,
+      "label": "Желаемая степень"
+    },
+    "intended_study_field": {
+      "type": "string",
+      "required": true,
+      "label": "Предмет изучения"
+    },
+    "begin_studies": {
+      "type": "string",
+      "required": true,
+      "label": "Планируемая дата начала обучения"
+    },
+    "financial_qualifier": {
+      "type": "string",
+      "required": true,
+      "label": "Финансовое обеспечение"
+    },
+    "verifycode": {
+      "type": "string",
+      "required": true,
+      "label": "Код подтверждения"
+    },
+    "usage_agreement": {
+      "type": "boolean",
+      "required": true,
+      "label": "Соглашение об использовании"
+    }
+  }
+}
+]
