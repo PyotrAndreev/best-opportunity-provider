@@ -14,7 +14,6 @@ class CreateUserFormatter(fmt.BaseDBFormatter):
             fmt.append_db_field_error_factory('email', transformer=transform_non_unique_email_error),
     })
 
-
 def create_user(
     session: Session, credentials: db.serializers.User.Credentials
 ) -> db.User | fmt.ErrorTrace:

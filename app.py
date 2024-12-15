@@ -1,5 +1,5 @@
 import config
-import api
+import api, ui
 from uvicorn import run
 
 

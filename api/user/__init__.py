@@ -1,1 +1,1 @@
-from . import auth
+from . import auth, avatar, info, cv

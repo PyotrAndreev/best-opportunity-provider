@@ -1,7 +1,7 @@
 from copy import copy
 from ipaddress import IPv4Address
 
-from ..base import *
+from .base import *
 
 
 class CredentialsFormatter(fmt.BaseSerializerFormatter):
@@ -78,3 +78,17 @@ RequestValidationErrorHandler.register_handler(
     '/api/login', HttpMethod.POST,
     default_request_validation_error_handler_factory(LoginFormatter.format_serializer_errors)
 )
+
+
+@app.post('/api/logout')
+def logout(api_key: Annotated[str | None, Cookie()] = None) -> JSONResponse:
+    response = JSONResponse({})
+    response.delete_cookie('api_key')
+    if api_key is None or not db.serializers.assert_api_key(api_key):
+        return response
+    with db.Session.begin() as session:
+        personal_api_key = mw.get_personal_api_key(session, api_key)
+        if personal_api_key is None:
+            return response
+        personal_api_key.expire(session)
+    return response

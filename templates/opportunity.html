@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script id="opportunity-dump" type="application/json">
+        {
+            "opportunity_id": "{{ id }}"
+        }
+    </script>
+</head>
+<body>
+    <h2>Opportunity</h2>
+    <div>
+        <h4>Name</h4>
+        <p>{{ name }}</p>
+    </div>
+    <div>
+        <h4>Provider</h4>
+        <div id="provider-container" style="cursor:pointer"
+         onclick="document.location.href='/opportunities?provider_ids={{ provider_id }}'">
+            <img src="{{ provider_logo_url }}" style="max-width: 32px; max-height: 32px;">
+            <p>{{ provider_name }}</p>
+        </div>
+    </div>
+    <div>
+        <h4>Tags</h4>
+        <div id="tags-container">
+            {{ tags|safe }}
+        </div>
+    </div>
+    <div>
+        <h4>Geotags</h4>
+        <div id="geotags-container">
+            {{ geotags|safe }}
+        </div>
+    </div>
+    <div>
+        <h4>Description</h4>
+        <div id="description-container"></div>
+    </div>
+    <div>
+        <h4>Form</h4>
+        <div id="form-container"></div>
+    </div>
+</body>
+<script src="/static/scripts/elements/tag.js"></script>
+<script src="/static/scripts/elements/geotag.js"></script>
+<script src="/static/scripts/opportunity.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js" integrity="sha512-LhccdVNGe2QMEfI3x4DVV3ckMRe36TfydKss6mJpdHjNFiV07dFpS2xzeZedptKZrwxfICJpez09iNioiSZ3hA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</html>

@@ -42,6 +42,9 @@ from enum import StrEnum
 class HttpMethod(StrEnum):
     GET = 'GET'
     POST = 'POST'
+    PATCH = 'PATCH'
+    PUT = 'PUT'
+    DELETE = 'DELETE'
 
 from typing import Callable
 import re
@@ -51,10 +54,10 @@ from fastapi.responses import Response
 from fastapi.exceptions import RequestValidationError
 
 class RequestValidationErrorHandler:
-    type Handler = Callable[[RequestValidationError], Response]
+    type Handler = Callable[[Request, RequestValidationError], Response]
 
     url_to_handler: dict[tuple[str, HttpMethod], Handler] = {}
-    url_pattern_to_handler: dict[HttpMethod, list[tuple[re.Pattern, Handler]]] = {}
+    url_pattern_to_handler: list[tuple[re.Pattern, list[HttpMethod], Handler]] = []
     default_handler: Handler | None = None
 
     @classmethod
@@ -62,8 +65,8 @@ class RequestValidationErrorHandler:
         cls.url_to_handler[(url, method)] = handler
 
     @classmethod
-    def register_pattern_handler(cls, pattern: re.Pattern, method: HttpMethod, handler: Handler) -> None:
-        cls.url_pattern_to_handler.setdefault(method, []).append((pattern, handler))
+    def register_pattern_handler(cls, pattern: re.Pattern, methods: list[HttpMethod], handler: Handler) -> None:
+        cls.url_pattern_to_handler.append((pattern, methods, handler))
 
     @classmethod
     def set_default_handler(cls, handler: Handler) -> None:
@@ -72,14 +75,13 @@ class RequestValidationErrorHandler:
     @classmethod
     def handle_error(cls, request: Request, error: RequestValidationError) -> Response:
         if handler := cls.url_to_handler.get((request.url.path, request.method.upper())):
-            return handler(error)
-        if handlers := cls.url_pattern_to_handler.get(request.method.upper()):
-            for pattern, handler in handlers:
-                if pattern.match(request.url.path):
-                    return handler(error)
+            return handler(request, error)
+        for pattern, methods, handler in cls.url_pattern_to_handler:
+            if request.method in methods and pattern.match(request.url.path):
+                return handler(request, error)
         logger.debug('Reached default request validation error handler (url=\'%s\', method=%s, error=%s)')
         if cls.default_handler:
-            return cls.default_handler(error)
+            return cls.default_handler(request, error)
         raise KeyError(f'Unhandled request validation error: {error} '
                        f'(url=\'{request.url.path}\', method={request.method})')
 

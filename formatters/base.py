@@ -4,6 +4,7 @@ from offer_db.utils import *
 
 
 class FieldErrorCode(IntEnum):
+    # Pydantic
     MISSING = 100
     EXTRA = 101
     WRONG_TYPE = 102
@@ -12,6 +13,8 @@ class FieldErrorCode(IntEnum):
     NOT_IN_RANGE = 105
     MISSING_DISCRIMINATOR = 106
     INVALID_DISCRIMINATOR = 107
+    # DB
+    INVALID_API_KEY = 150
 
 
 type FormattedError = tuple[IntEnum, str]
@@ -346,7 +349,7 @@ def transform_list_error_factory(human_list_field_name: str, *, min_length: int 
 
     return transform_fn
 
-def transform_dict_error_facory(human_dict_field_name: str, *, min_length: int | None = None,
+def transform_dict_error_factory(human_dict_field_name: str, *, min_length: int | None = None,
                                 max_length: int | None = None) -> SerializerErrorTransformer:
     """Default dictionary field error transformer factor. If your field is named 'fields', then 'human_dict_field_name'
        should be 'Fields'."""
@@ -395,5 +398,15 @@ def transform_nested_model_error_factory(human_model_field_name: str) -> Seriali
                 return FieldErrorCode.MISSING, 'Missing required field'
             case 'model_attributes_type':
                 return FieldErrorCode.WRONG_TYPE, f'{human_model_field_name} must be a dictionary'
+
+    return transform_fn
+
+def transform_file_error_factory(human_field_name: str) -> SerializerErrorTransformer:
+    def transform_fn(error: PydanticError, _root: int) -> FormattedError | None:
+        match error['type']:
+            case 'missing':
+                return FieldErrorCode.MISSING, 'Missing required field'
+            case 'value_error':
+                return FieldErrorCode.WRONG_TYPE, f'{human_field_name} must be a file'
 
     return transform_fn
