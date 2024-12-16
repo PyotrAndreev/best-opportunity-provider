@@ -1,7 +1,7 @@
 import requests
 from DBL.config import *
 from DBL.api_keygen import api_key
-from DBL.forms import convert_field_for_db
+from DBL.forms import convert_fields_for_db
 import DBL.renderer as renderer
 from DBL.tags_worker import add_opportunity_tags
 
@@ -41,6 +41,7 @@ def update_opportunity_form(opportunity, opportunity_id) -> int:
         "opportunity_id": opportunity_id
     }
     # Fields
+    convert_fields_for_db(opportunity)
     json = {
         "fields": opportunity['form']
     }
