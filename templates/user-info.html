@@ -1,14 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}{{ user['email'] }} - Offer{% endblock %}
+{% block head %}
+    {{ super() }}
+    <!-- TODO: add stylesheets -->
+{% endblock %}
+{% block content %}
     <h2>User Info</h2>
     <div>
         <p>Avatar</p>
-        <img id="avatar-img" src="{{ avatar_url }}" style="max-width: 32px; max-height: 32px;">
+        <img id="avatar-img" src="{{ user['avatar_url'] }}" style="max-width: 32px; max-height: 32px;">
     </div>
     <div>
         <input type="file" id="avatar-field" accept=".png">
@@ -19,7 +20,7 @@
         Name<br>
         <div>
             {% if name %}
-                <input type="text" value={{name}} id="namefield">
+                <input type="text" value="{{ name }}" id="namefield">
             {% else %}
                 <input type="text" id="namefield">
             {% endif %}
@@ -30,7 +31,7 @@
         Surname<br>
         <div>
             {% if surname %}
-                <input type="text" value={{surname}} id="surnamefield">
+                <input type="text" value="{{ surname }}" id="surnamefield">
             {% else %}
                 <input type="text" id="surnamefield">
             {% endif %}
@@ -41,9 +42,9 @@
         Birthday<br>
         <div>
             {% if birthday %}
-                <input type='date' value="{{birthday}}" id="datefield">
+                <input type="date" value="{{ birthday }}" id="datefield">
             {% else %}
-                <input type='date' id="datefield">
+                <input type="date" id="datefield">
             {% endif %}
             <p></p>
         </div>
@@ -58,9 +59,9 @@
         <input type="file" id="cv-filefield" accept=".pdf">
         <p></p>
     </div>
-    <button id="cv-upload">Upload</button> <br>
-    <button id="logout">Logout</button>
-</body>
-<script src="/static/scripts/elements/cv.js"></script>
-<script src="/static/scripts/user-info.js"></script>
-</html>
+    <button id="cv-upload">Upload</button>
+{% endblock %}
+{% block scripts %}
+    <script src="/static/scripts/elements/cv.js"></script>
+    <script src="/static/scripts/user-info.js"></script>
+{% endblock %}

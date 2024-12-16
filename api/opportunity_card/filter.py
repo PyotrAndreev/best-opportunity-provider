@@ -1,6 +1,9 @@
 from ..base import *
 
 
+class GetOpportunityCardsQueryParameters(db.serializers.Opportunity.Filter):
+    responded: Annotated[bool, Field(default=False)]
+
 class GetOpportunityCardsFormatter(fmt.BaseSerializerFormatter):
     serializer_error_appender = fmt.RootSerializerErrorAppender(
         query=fmt.BaseSerializerErrorAppender(
@@ -20,13 +23,14 @@ class GetOpportunityCardsFormatter(fmt.BaseSerializerFormatter):
                     fmt.transform_id_error_factory('Geotag id'))
             ),
             page=fmt.append_serializer_field_error_factory(fmt.transform_int_error_factory('Page', ge=1)),
+            responded=fmt.append_serializer_field_error_factory(fmt.transform_bool_error_factory('Responded')),
         ),
         cookie=fmt.APISerializerErrorAppender(),
     )
 
 @app.get('/api/opportunity-cards')
 def get_opportunity_cards(
-    query: Annotated[db.serializers.Opportunity.Filter, Query()],
+    query: Annotated[GetOpportunityCardsQueryParameters, Query()],
     cookie: Annotated[db.serializers.APIKeyModel, Cookie()],
 ) -> JSONResponse:
     with db.Session.begin() as session:
@@ -42,6 +46,7 @@ def get_opportunity_cards(
             tags=filter.tags,
             geotags=filter.geotags,
             page=query.page,
+            user=(api_key.user if query.responded else None),
             public=True,
         )
         response = [opportunity.cards[0].get_dict() for opportunity in opportunities]

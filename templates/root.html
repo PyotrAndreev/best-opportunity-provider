@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}Home - Offer{% endblock %}
+{% block head %}
+    {{ super() }}
+    <!-- TODO: add stylesheets -->
+{% endblock %}
+{% block content %}
     <h3>Welcome back to Offer!</h3>
-    <a href="/me/info">User Info</a>
-    <a href="/opportunities">Opportunities</a>
-</body>
-</html>
+{% endblock %}

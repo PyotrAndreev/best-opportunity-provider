@@ -288,7 +288,7 @@ def transform_bool_error_factory(human_field_name: str) -> SerializerErrorTransf
         match error['type']:
             case 'missing':
                 return FieldErrorCode.MISSING, 'Missing required field'
-            case 'bool_type':
+            case 'bool_type' | 'bool_parsing':
                 return FieldErrorCode.WRONG_TYPE, f'{human_field_name} must be a boolean'
 
     return transform_fn

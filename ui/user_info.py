@@ -11,5 +11,7 @@ def user_info(request: Request, api_key: Annotated[str | None, Cookie()] = None)
         personal_api_key = mw.get_personal_api_key(session, api_key)
         if personal_api_key is None:
             return RedirectResponse('/cookies')
-        info = personal_api_key.user.user_info.get_dict()
-    return templates.TemplateResponse(request, 'user-info.html', context=info)
+        context = personal_api_key.user.user_info.get_dict() | {
+            'user': get_user_dict(personal_api_key.user),
+        }
+    return templates.TemplateResponse(request, 'user-info.html', context=context)

@@ -29,9 +29,12 @@ def opportunity(
         )
         if not isinstance(opportunity, db.Opportunity):
             return opportunity_doesnt_exist(request)
-        context = opportunity.get_dict()
-    context['tags'] = embedded_json(json.dumps(context['tags']))
-    context['geotags'] = embedded_json(json.dumps(context['geotags']))
+        context = {
+            'user': get_user_dict(personal_api_key.user),
+            'opportunity': opportunity.get_dict(),
+        }
+    context['opportunity']['tags'] = embedded_json(json.dumps(context['opportunity']['tags']))
+    context['opportunity']['geotags'] = embedded_json(json.dumps(context['opportunity']['geotags']))
     return templates.TemplateResponse(request, 'opportunity.html', context=context)
 
 RequestValidationErrorHandler.register_pattern_handler(

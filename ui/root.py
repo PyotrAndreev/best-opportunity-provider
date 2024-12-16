@@ -11,4 +11,5 @@ def root(request: Request, api_key: Annotated[str | None, Cookie()] = None):
         personal_api_key = mw.get_personal_api_key(session, api_key)
         if personal_api_key is None:
             return RedirectResponse('/cookies')
-        return templates.TemplateResponse(request, 'root.html')
+        context = { 'user': get_user_dict(personal_api_key.user) }
+    return templates.TemplateResponse(request, 'root.html', context=context)

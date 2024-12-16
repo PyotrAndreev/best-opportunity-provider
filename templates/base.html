@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        {% block head %}
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/static/styles/header.css"/>
+        <title>{% block title %}{% endblock %}</title>
+        {% endblock %}
+    </head>
+    <body>
+        <div id="header-container">
+            <div id="navigation-container">
+                <a href="/">Home</a>
+                <a href="/opportunities">Opportunities</a>
+                <a href="/me/responses">Responses</a>
+                <a href="/me/info">Info</a>
+            </div>
+            <div id="user-container">
+                {% if user %}
+                    <p id="user-email">{{ user['email'] }}</p>
+                    <img id="user-avatar" src="{{ user['avatar_url'] }}" style="max-width: 32px; max-height: 32px;">
+                {% else %}
+                    <a href="/sign-in">Sign in</a>
+                    <a href="/sign-up">Sign up</a>
+                {% endif %}
+            </div>
+        </div>
+        <div id="content-container">{% block content %}{% endblock %}</div>
+    </body>
+    {% block scripts %}{% endblock %}
+</html>
