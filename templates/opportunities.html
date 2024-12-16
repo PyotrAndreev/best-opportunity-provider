@@ -1,27 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Opportunities</title>
+{% extends "base.html" %}
+
+{% block title %}Opportunities - Offer{% endblock %}
+{% block head %}
+    {{ super() }}
     <script id="filters-dump" type="application/json">
         {
-            "providers": {{ providers|safe }},
-            "tags": {{ tags|safe }},
-            "geotags": {{ geotags|safe }},
-            "page": {{ page }}
+            "providers": {{ filters['providers']|safe }},
+            "tags": {{ filters['tags']|safe }},
+            "geotags": {{ filters['geotags']|safe }},
+            "page": {{ filters['page'] }}
         }
     </script>
-    <style>
-        .hidden {
-            display: none;
-        }
-
-        .selected {
-            font-weight: 700;
-        }
-    </style>
-</head>
-<body>
+    <!-- TODO: add stylesheets -->
+{% endblock %}
+{% block content %}
     <div id="filters-container">
         <h3>Filters</h3>
         <div id="filter-categories-container"></div>
@@ -29,8 +21,9 @@
     </div>
     <h2>Opportunities</h2>
     <div id="cards-container"></div>
-</body>
-<script src="/static/scripts/utils.js"></script>
-<script src="/static/scripts/elements/filters.js"></script>
-<script src="/static/scripts/opportunities.js"></script>
-</html>
+{% endblock %}
+{% block scripts %}
+    <script src="/static/scripts/utils.js"></script>
+    <script src="/static/scripts/elements/filters.js"></script>
+    <script src="/static/scripts/opportunities.js"></script>
+{% endblock %}

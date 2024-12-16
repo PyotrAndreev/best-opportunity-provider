@@ -17,13 +17,8 @@
                 <a href="/me/info">Info</a>
             </div>
             <div id="user-container">
-                {% if user %}
-                    <p id="user-email">{{ user['email'] }}</p>
-                    <img id="user-avatar" src="{{ user['avatar_url'] }}" style="max-width: 32px; max-height: 32px;">
-                {% else %}
-                    <a href="/sign-in">Sign in</a>
-                    <a href="/sign-up">Sign up</a>
-                {% endif %}
+                <p id="user-email">{{ user['email'] }}</p>
+                <img id="user-avatar" src="{{ user['avatar_url'] }}" style="max-width: 32px; max-height: 32px;">
             </div>
         </div>
         <div id="content-container">{% block content %}{% endblock %}</div>
