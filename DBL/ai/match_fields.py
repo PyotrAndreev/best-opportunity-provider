@@ -5,6 +5,36 @@ from .config import *
 
 from json import loads
 
+from enum import IntEnum
+
+
+class FillType(IntEnum):
+    NAME = 0
+    SURNAME = 1
+    FULLNAME = 2
+    EMAIL = 3
+    PHONE_NUMBER = 4
+    CV = 5
+    GPA = 6
+    DIPLOMA = 7
+    RECOMMENDATIONAL_LETTER = 8
+    PASSPORT = 9
+
+
+def match_fill_type(tp: str) -> FillType:
+    return {
+        "name": FillType.NAME,
+        "surname": FillType.SURNAME,
+        "fullname": FillType.FULLNAME,
+        "email": FillType.EMAIL,
+        "telephone": FillType.PHONE_NUMBER,
+        "cv_file": FillType.CV,
+        "GPA_file": FillType.GPA,
+        "diploma_file": FillType.DIPLOMA,
+        "recomendation_letter_file": FillType.RECOMMENDATIONAL_LETTER,
+        "passport_scan": FillType.PASSPORT
+    }.get(tp, FillType.NAME)
+
 
 def make_match_fields_query(form_fields: dict):
     query = """
@@ -13,12 +43,15 @@ def make_match_fields_query(form_fields: dict):
 
 {
   "name": "",
-  "telephone": "",
+  "surname": "",
+  "fullname",
   "email": "",
-  "birthday": "",
+  "telephone": "",
   "cv_file": "",
-  "motivation_letter_file": "",
-  "recomendation_letter_file": ""
+  "GPA_file": "",
+  "diploma_file": "",
+  "recomendation_letter_file": "",
+  "passport_scan": "",
 }
 
 Не добавляй никакого дополнительного текста перед или после JSON.
@@ -64,7 +97,8 @@ def parse_query_result(result: str, form_fields: dict, json_fname: str) -> dict:
         if not attached_class:
             uff_err(f'Error while defining class of "{key}: {value}". Checkout file {json_fname}')
             return {}
-        parsed[key] = attached_class
+        # parsed[key] = attached_class
+        parsed[attached_class] = key
     return parsed
 
 
