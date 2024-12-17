@@ -3,7 +3,13 @@ from time import sleep
 from DBL.config import *
 
 PARSERS = [
-    'example_maker'
+    'example_maker',
+    'parser_Changellenge',
+    'parser_Habr',
+    'parser_InternationalStudent',
+    'parser_Studyqa',
+    'parser_Superjob',
+    'parser_Yandex'
 ]
 
 PARSER_TIMEOUT = 5.0

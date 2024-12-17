@@ -27,6 +27,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 import urllib, json
 from io import BytesIO
 
+from DBL.config import PARSER_JSON_DIR
+
 from openai import OpenAI
 
 import time
@@ -90,5 +92,3 @@ def question_to_gpt(question: str) -> str:
         if result[i] == '}':
             end = i
     return result[start: end + 1]
-
-PARSER_JSON_DIR = 
