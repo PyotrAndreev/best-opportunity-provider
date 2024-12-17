@@ -1,6 +1,19 @@
 import logging
 
-dbl_logger = logging.getLogger('DBL')
+_dbl_logger = logging.getLogger('DBL')
+
+
+def dbl_log(mes: str):
+    _dbl_logger.log(logging.INFO, mes)
+
+
+def dbl_err(mes: str):
+    _dbl_logger.error(mes)
+
+
+PARSER_JSON_DIR = "DBL/json"
+TEMP_MD_DESC_FILE_PATH = "DBL/rendered/dbl_rendered_.md"
+
 
 OPPORTUNITY_FILTER_MODEL = {
     'link': {

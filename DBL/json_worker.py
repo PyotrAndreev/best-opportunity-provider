@@ -46,7 +46,7 @@ def record_check_by_keys(opp_record: dict, fname, record_index) -> bool:  # True
         field_types = set(field_model['types_supported'])
         # Check for types
         if not any((isinstance(value, tp) for tp in field_types)):
-            dbl_logger.error(not_valid_type_mes(key))
+            dbl_err(not_valid_type_mes(key))
             return False
         # Str to list convertation
         if {str, list}.issubset(field_types) and isinstance(value, str):
@@ -54,26 +54,26 @@ def record_check_by_keys(opp_record: dict, fname, record_index) -> bool:  # True
         # Check list item types
         if '__list_item_type__' in field_model and isinstance(value, list):
             if not all((any((isinstance(i, j) for j in field_model['__list_item_type__'])) for i in value)):
-                dbl_logger.error(not_valid_type_mes(key))
+                dbl_err(not_valid_type_mes(key))
                 return False
         # Check dict item types
         if '__dict__item__struct__' in field_model and isinstance(value, dict):
             if set(value.keys()) != set(field_model['__dict__item__struct__']):
-                dbl_logger.error(not_valid_type_mes(key))
+                dbl_err(not_valid_type_mes(key))
                 return False
     # rm empty keys
     remove_dict_keys(opp_record, keys_to_del)
     # Check remaining models
     req_models = [m_nm for m_nm, m_desc in models if m_desc['required']]
     if req_models:
-        dbl_logger.error(f'Opportunity #{record_index} in "{fname}" has not required fields: {", ".join(req_models)}')
+        dbl_err(f'Opportunity #{record_index} in "{fname}" has not required fields: {", ".join(req_models)}')
         return False
     return True
 
 
 def filter_opportunity_record(opp_record, fname, record_index):
     if not isinstance(opp_record, dict):
-        dbl_logger.error(f'Opportunity #{record_index} in "{fname}" is not a dict instance')
+        dbl_err(f'Opportunity #{record_index} in "{fname}" is not a dict instance')
     # Clear empty fields
     clear_record_empty_fields(opp_record)
     # KeyWorker
@@ -85,14 +85,14 @@ def parse_opportunity_json(fname: str):
     # Load
     json_data = load_from_file(fname)
     if 'error' in json_data:
-        dbl_logger.error(f'Can\' parse all file "{fname}". Reason: {json_data["error"]}')
-    dbl_logger.log(logging.INFO, f'Loaded opportunity set file: {fname}')
+        dbl_err(f'Can\' parse all file "{fname}". Reason: {json_data["error"]}')
+    dbl_log(f'Loaded opportunity set file: {fname}')
     # Filter
     if not isinstance(json_data.get('json'), list):
-        dbl_logger.error(f'Json file "{fname}" is not list instance')
+        dbl_err(f'Json file "{fname}" is not list instance')
     filtered_opp_list = []
     for ind, opp_record in enumerate(json_data['json']):
         if filter_opportunity_record(opp_record, fname, ind):
             filtered_opp_list.append(opp_record)
-    dbl_logger.log(logging.INFO, f'Filtered opportunity set: {fname}')
+    dbl_log(f'Filtered opportunity set: {fname}')
     return filtered_opp_list
