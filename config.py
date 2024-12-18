@@ -20,7 +20,7 @@ logger = logging.getLogger()
 
 # ===== Application configuration =====
 
-HOST: str = '127.0.0.1'
+HOST: str = '192.168.8.21'
 PORT: int = 8000
 
 from fastapi import FastAPI

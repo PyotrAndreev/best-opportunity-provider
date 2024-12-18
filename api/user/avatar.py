@@ -55,7 +55,7 @@ async def update_user_avatar(
         if not isinstance(api_key, db.PersonalAPIKey):
             return JSONResponse(api_key, status_code=422)
         api_key.user.user_info.update_avatar(
-            db.minio_client, db.File(avatar.file, format, avatar.size)
+            db.minio_client, db.FileStream(avatar.file, format, avatar.size)
         )
     return JSONResponse({})
 

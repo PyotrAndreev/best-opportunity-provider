@@ -3,3 +3,5 @@ __pycache__
 .idea
 logs
 .vscode
+tasks.md
+migrate.py

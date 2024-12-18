@@ -51,9 +51,9 @@ class UpdateOpportunityDescriptionFormatter(fmt.BaseSerializerFormatter):
     )
 
     @classmethod
-    def get_invalid_content_type_error() -> fmt.ErrorTrace:
+    def get_invalid_content_type_error(cls) -> fmt.ErrorTrace:
         return {
-            'description': [{ 'type': fmt.FieldErrorCode, 'message': 'Description must be a Markdown file' }]
+            'description': [{ 'type': fmt.FieldErrorCode.WRONG_TYPE, 'message': 'Description must be a Markdown file' }]
         }
 
 @app.put('/api/private/opportunity/description')
@@ -73,11 +73,11 @@ def update_opportunity_description(
         if not isinstance(api_key, db.DeveloperAPIKey):
             return JSONResponse(api_key, status_code=422)
         opportunity = mw.get_opportunity_by_id(
-            session, query.opportunty_id, error_code=ErrorCode.INVALID_OPPORTUNITY_ID
+            session, query.opportunity_id, error_code=ErrorCode.INVALID_OPPORTUNITY_ID
         )
         if not isinstance(opportunity, db.Opportunity):
             return JSONResponse(opportunity, status_code=422)
-        opportunity.update_description(db.minio_client, db.File(description.file, None, description.size))
+        opportunity.update_description(db.minio_client, db.FileStream(description.file, None, description.size))
     return JSONResponse({})
 
 RequestValidationErrorHandler.register_handler(

@@ -54,7 +54,7 @@ async def add_cv(
             return JSONResponse(api_key, status_code=422)
         db.CV.add(
             session, db.minio_client, api_key.user,
-            db.File(cv.file, format, cv.size), cv.filename[:50]
+            db.FileStream(cv.file, format, cv.size), cv.filename[:50]
         )
     return JSONResponse({})
 

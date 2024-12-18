@@ -7,7 +7,7 @@ class CreateOpportunityCardFormatter(fmt.BaseSerializerFormatter):
         query=QueryParametersAppender,
         body=fmt.BaseSerializerErrorAppender(
             title=fmt.append_serializer_field_error_factory(
-                fmt.transform_str_error_factory('Title', min_length=1, max_length=50)),
+                fmt.transform_str_error_factory('Title', min_length=1, max_length=100)),
             subtitle=fmt.append_serializer_field_error_factory(
                 fmt.transform_str_error_factory('Subtitle', min_length=1, max_length=50)),
         ),

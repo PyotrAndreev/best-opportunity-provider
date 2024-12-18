@@ -15,6 +15,10 @@ from fastapi.responses import Response, JSONResponse
 from fastapi import Path, Query, Cookie
 from pydantic import BaseModel, Field
 
+import logging
+
+logger = logging.getLogger('api')
+
 
 def default_request_validation_error_handler_factory(
     formatter: Callable[[Iterable[fmt.PydanticError]], fmt.ErrorTrace],
