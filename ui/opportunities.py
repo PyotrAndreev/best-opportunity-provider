@@ -1,4 +1,5 @@
 from .base import *
+from api.opportunity_card.filter import GetOpportunityCardsQueryParameters
 
 import json
 
@@ -6,8 +7,8 @@ import json
 @app.get('/opportunities')
 def opportunities(
     request: Request,
-    filters: Annotated[db.serializers.Opportunity.Filter,
-                       Query(default_factory=db.serializers.Opportunity.Filter)],
+    filters: Annotated[GetOpportunityCardsQueryParameters,
+                       Query(default_factory=GetOpportunityCardsQueryParameters)],
     api_key: Annotated[str | None, Cookie()] = None,
 ):
     if api_key is None:
