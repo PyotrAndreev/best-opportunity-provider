@@ -29,9 +29,11 @@ def opportunity(
         )
         if not isinstance(opportunity, db.Opportunity):
             return opportunity_doesnt_exist(request)
+        opportunity_dict = opportunity.get_dict()
         context = {
             'user': get_user_dict(personal_api_key.user),
-            'opportunity_dump': json.dumps(opportunity.get_dict()),
+            'title': opportunity_dict['name'],
+            'opportunity_dump': json.dumps(opportunity_dict),
         }
     return templates.TemplateResponse(request, 'opportunity.html', context=context)
 
