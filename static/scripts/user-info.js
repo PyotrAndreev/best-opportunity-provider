@@ -23,9 +23,10 @@ function updateCVList() {
 document.addEventListener('DOMContentLoaded', () => {
     updateCVList()
     const avatarUploadButton = document.getElementById("avatar-upload")
-    const avatarField = document.getElementById("avatar-field")
+    // const avatarField = document.getElementById("avatar-field")
     const avatarImg = document.getElementById("avatar-img")
-    avatarUploadButton.addEventListener("click", (e) => {
+    const avatarField = document.getElementById("avatar-upload")
+    avatarField.onchange = (e) => {
         if (avatarField.files.length === 0) {
             avatarField.parentElement.children[1].textContent = 'Select a file to upload'
             return
@@ -44,11 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 return
             }
             response_json = await response.json()
+            console.log(response_json)
             Object.keys(response_json).forEach(key => {
                 // no errors here yet
             })
         })
-    })
+    }
 })
 
 const nameField = document.getElementById('namefield')

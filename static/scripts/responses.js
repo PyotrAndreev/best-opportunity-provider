@@ -7,7 +7,8 @@ let filters = {
     providers: new Set(),
     tags: new Set(),
     geotags: new Set(),
-    page: 1
+    page: 1,
+    pages: 1
 }
 
 function copy_filters(filters) {
@@ -15,7 +16,8 @@ function copy_filters(filters) {
         providers: new Set(filters.providers),
         tags: new Set(filters.tags),
         geotags: new Set(filters.geotags),
-        page: filters.page
+        page: filters.page,
+        pages: filters.pages
     }
 }
 
@@ -50,6 +52,7 @@ function loadFiltersDump() {
     filters.tags = new Set(Object.keys(dump.tags))
     filters.geotags = new Set(Object.keys(dump.geotags))
     filters.page = dump.page
+    filters.pages = dump.pages
 }
 
 function toggleProviderFilter(id) {
@@ -377,13 +380,54 @@ document.addEventListener("DOMContentLoaded", () => {
     history.replaceState({ filters: copy_filters(filters), fetched: false }, "")
     initializeFilters()
     fetchOpportunityCards()
+    initializeNavigationButton()
+    handleNavigationButtons()
 })
+
+function initializeNavigationButton() {
+    const next_page_button = document.getElementById("next-page-button")
+    const prev_page_button = document.getElementById("prev-page-button")
+    next_page_button.onclick = (e) => {
+        if (!next_page_button.classList.contains("disabled")) {
+            filters.page += 1
+            history.pushState({ filters: copy_filters(filters), fetched: false }, "", serialize_filters())
+            fetchOpportunityCards()
+            handleNavigationButtons()
+        }
+    }
+    prev_page_button.onclick = (e) => {
+        if (!prev_page_button.classList.contains("disabled")) {
+            filters.page -= 1
+            history.pushState({ filters: copy_filters(filters), fetched: false }, "", serialize_filters())
+            fetchOpportunityCards()
+            handleNavigationButtons()
+        }
+    }
+}
+
+function handleNavigationButtons() {
+    const next_page_button = document.getElementById("next-page-button")
+    const prev_page_button = document.getElementById("prev-page-button")
+    console.log(filters.pages)
+    if (filters.page === filters.pages) {
+        next_page_button.classList.add("disabled")
+    } else {
+        next_page_button.classList.remove("disabled")
+    }
+    if (filters.page === 1) {
+        prev_page_button.classList.add("disabled")
+    } else {
+        prev_page_button.classList.remove("disabled")
+    }
+}
 
 window.addEventListener("popstate", (event) => {
     filters = copy_filters(event.state.filters)
     updateProviderFilterItems()
     updateTagFilterItems()
     updateGeotagFilterItems()
+    handleNavigationButtons()
+
     if (!event.state.fetched) {
         fetchOpportunityCards()
     } else {

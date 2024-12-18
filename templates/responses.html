@@ -8,7 +8,8 @@
             "providers": {{ filters['providers']|safe }},
             "tags": {{ filters['tags']|safe }},
             "geotags": {{ filters['geotags']|safe }},
-            "page": {{ filters['page'] }}
+            "page": {{ filters['page'] }},
+            "pages": {{ filters['pages'] }}
         }
     </script>
     <link rel="stylesheet" href="../static/styles/opportunities/page.css">
@@ -22,6 +23,14 @@
                 <div id="opportunities-filter">
                     <div id="filter-categories-container"></div>
                     <button id="apply-filters-button">Apply</button>
+                </div>
+                <div id="opportunities-nav-buttons">
+                    <div id="prev-page-button">
+                        <img src="/static/img/arrow.png">
+                    </div>
+                    <div id="next-page-button">
+                        <img src="/static/img/arrow.png">
+                    </div>
                 </div>
             </div>
             <div id="opportunities-container-div">

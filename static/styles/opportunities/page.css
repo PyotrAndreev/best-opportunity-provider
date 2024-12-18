@@ -28,6 +28,7 @@ body {
 #opportunities-filter-div {
     grid-row: 2 / 3;
     grid-column: 2 / 3;
+    width: 100%;
 }
 
 #opportunities-container-div {
@@ -47,7 +48,7 @@ body {
     display: grid;
     grid-template-columns: 5px auto 5px;
     grid-template-rows: 5px auto 10px auto 5px;
-
+    max-width: 100%;
     position: sticky;
     top: 20px;
 }
@@ -127,6 +128,7 @@ body {
     grid-row: 6 / 7;
     display: flex;
     flex-direction: column;
+    width: 100%;
     /*grid-template-rows: 5px auto 10px auto 10px auto 5px;*/
 }
 
@@ -286,7 +288,7 @@ body {
     padding-right: 5px;
 }
 
-p {
+#user-email, .card-title, .card-subtitle{
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -294,6 +296,14 @@ p {
 
 .filter-search {
     margin-top: 5px;
+}
+
+
+.filter-load-more-container {
+    width: 100%;
+}
+.filter-load-more-container p {
+    width: 100%;
 }
 
 .filter-load-more-container button {
@@ -317,7 +327,8 @@ p {
     align-items: center;
     justify-content: center;
     position: sticky;
-    top: 240px;
+    top: 230px;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     width: 60px;
@@ -343,6 +354,11 @@ p {
     width: 30px;
 }
 
-#prev-page-button:hover, #next-page-button:hover {
+#next-page-button.disabled img, #prev-page-button.disabled img {
+    filter: brightness(0) saturate(100%) invert(98%) sepia(12%) saturate(5736%) hue-rotate(180deg) brightness(115%) contrast(77%);
+}
+
+
+#prev-page-button:not(.disabled):hover, #next-page-button:not(.disabled):hover {
     background-color: #dddfe1;
 }

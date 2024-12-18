@@ -36,9 +36,9 @@ class UpdateUserAvatarFormatter(fmt.BaseSerializerFormatter):
     )
 
     @classmethod
-    def get_invalid_content_type_error() -> fmt.ErrorTrace:
+    def get_invalid_content_type_error(cls) -> fmt.ErrorTrace:
         return {
-            'avatar': [{ 'type': fmt.FieldErrorCode, 'message': 'Invalid avatar content type' }]
+            'avatar': [{ 'type': fmt.FieldErrorCode.WRONG_TYPE, 'message': 'Invalid avatar content type' }]
         }
 
 @app.post('/api/user/avatar')

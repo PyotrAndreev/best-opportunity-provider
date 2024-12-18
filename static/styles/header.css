@@ -159,9 +159,9 @@ body {
     font-size: 14px;
     border: 0;
 }
-#user-dropdown-menu img {
-    width: 24px;
-    height: 24px;
+.user-dropdown-option img {
+    width: 20px;
+    height: 20px;
 }
 
 #user-container-info {
