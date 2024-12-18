@@ -31,10 +31,8 @@ def opportunity(
             return opportunity_doesnt_exist(request)
         context = {
             'user': get_user_dict(personal_api_key.user),
-            'opportunity': opportunity.get_dict(),
+            'opportunity_dump': json.dumps(opportunity.get_dict()),
         }
-    context['opportunity']['tags'] = embedded_json(json.dumps(context['opportunity']['tags']))
-    context['opportunity']['geotags'] = embedded_json(json.dumps(context['opportunity']['geotags']))
     return templates.TemplateResponse(request, 'opportunity.html', context=context)
 
 RequestValidationErrorHandler.register_pattern_handler(

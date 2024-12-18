@@ -11,7 +11,7 @@ class CreateOpportunityResponseQueryParameters(BaseModel):
 class CreateOpportunityResponseBody(BaseModel):
     model_config = {'extra': 'ignore'}
 
-    reponse_data: dict[str, Any]
+    response_data: dict[str, Any]
 
 class CreateOpportunityResponseFormatter(fmt.BaseSerializerFormatter):
     serializer_error_appender = fmt.RootSerializerErrorAppender(
@@ -46,7 +46,7 @@ async def create_opportunity_response(
         if not isinstance(opportunity, db.Opportunity):
             return JSONResponse(opportunity, status_code=422)
         response = mw.create_opportunity_response(
-            session, api_key.user, opportunity, body.reponse_data
+            session, api_key.user, opportunity, body.response_data
         )
         if not isinstance(response, db.OpportunityResponse):
             session.rollback()

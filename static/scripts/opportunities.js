@@ -116,7 +116,7 @@ function createProviderFilter() {
         container.insertBefore(search_container, items_container)
         updateProviderFilterItems = () => {
             let query = search_container.getElementsByTagName("input")[0].value
-            query = query.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&')
+            query = query.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&')
             const regex = new RegExp(`\\b${query}.*`, "i")
             Object.entries(filter_items.providers).forEach((item, index) => {
                 if (regex.test(item[1])) {
@@ -206,8 +206,8 @@ function createTagFilter() {
         container.insertBefore(search_container, items_container)
         updateTagFilterItems = () => {
             let query = search_container.getElementsByTagName("input")[0].value
-            query = query.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&')
-            const regex = new RegExp(`\\b${query}.*`, "i")
+            query = query.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&')
+            const regex = new RegExp(`${query}.*`, "i")
             Object.entries(filter_items.tags).forEach((item, index) => {
                 if (regex.test(item[1])) {
                     items_container.children[index].classList.remove("hidden")
@@ -296,7 +296,7 @@ function createGeotagFilter() {
         container.insertBefore(search_container, items_container)
         updateGeotagFilterItems = () => {
             let query = search_container.getElementsByTagName("input")[0].value
-            query = query.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&')
+            query = query.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&')
             const regex = new RegExp(`\\b${query}.*`, "i")
             Object.entries(filter_items.geotags).forEach((item, index) => {
                 if (regex.test(item[1][0]) || regex.test(item[1][1])) {
@@ -345,7 +345,10 @@ function initializeFilters() {
 
 function createOpportunityCards(cards) {
     const cardsContainer = document.getElementById("cards-container")
-    cardsContainer.innerText = JSON.stringify(cards)
+    cardsContainer.innerHTML = ""
+    cards.forEach(card => {
+        cardsContainer.appendChild(createOpportunityCard(card))
+    })
 }
 
 function fetchOpportunityCards() {
