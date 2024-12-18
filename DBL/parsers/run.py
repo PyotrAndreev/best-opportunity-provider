@@ -24,7 +24,7 @@ def parse_file(parser_name) -> str:
         return None
 
 
-def parse_all() -> list[str]:
+def parse_all_opportunities() -> list[str]:
     json_names = []
     for parser_name in PARSERS:
         sleep(PARSER_TIMEOUT)

@@ -8,6 +8,16 @@ client = OpenAI(
 
 
 def _make_completion(message: str):
+    """
+    Generates a chat completion response from the OpenAI API using the provided message.
+
+    Args:
+        message (str): The input message to send to the AI model.
+
+    Returns:
+        OpenAI Response: The completion response from the API, which includes chat options in streaming format.
+    """
+
     return client.chat.completions.create(
         model="meta/llama-3.3-70b-instruct",
         messages=[{"role": "user", "content": message}],
@@ -19,6 +29,16 @@ def _make_completion(message: str):
 
 
 def query(message: str) -> str:
+    """
+    Sends a message to the OpenAI API and returns the concatenated response from the AI model.
+
+    Args:
+        message (str): The input message to send to the AI model.
+
+    Returns:
+        str: The response content returned by the AI model after processing the input message.
+    """
+
     completion = _make_completion(message)
     chunks_content = []
     for chunk in completion:
