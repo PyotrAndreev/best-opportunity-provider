@@ -6,7 +6,6 @@
   "short_description": "Получите опыт работы в сфере гостиничного и ресторанного бизнеса во Франции.",
   "description": "Эта стажировка предоставляет возможность улучшить навыки работы в сфере обслуживания в отелях 4 и 5 звезд в курортной зоне Франции.",
   "provider": "GMM Ltd",
-  "logo": "https://ru.studyqa.com/web/internship/img/logo.png",
 
   "requirements": [
     "Возраст: 18 - 45",
@@ -61,11 +60,7 @@
   ],
 
   "allowance": "От $ 602 /мес.",
-  "expenses": [
-    "Визовые сборы",
-    "Перелет",
-    "Страховка"
-  ],
+  "expenses": "Визовые сборы, Перелет, Страховка",
 
   "additional": [
     {
@@ -87,35 +82,7 @@
     "Туризм",
     "Стажировка во Франции",
     "Отель на Лазурном берегу"
-  ],
-
-  "form": {
-    "name": {
-      "type": "string",
-      "required": true,
-      "label": "Введите ваше имя (латиницей)"
-    },
-    "email": {
-      "type": "email",
-      "required": true,
-      "name": "Введите ваш Email"
-    },
-    "phone": {
-      "type": "tel",
-      "required": true,
-      "name": "Введите ваш телефон (+XXXXXXX...)"
-    },
-    "country": {
-      "type": "select",
-      "required": true,
-      "name": "Выберите вашу страну",
-      "options": [
-        {"value": "4", "label": "Afghanistan"},
-        {"value": "902", "label": "Aland Islands"},
-        // Add more countries as needed
-      ]
-    }
-  }
+  ]
 },
 {
   "link": "https://ru.studyqa.com/internships/view/macedonia-medical-internship",
@@ -125,7 +92,6 @@
   "short_description": "Получите профессиональный опыт в больницах Северной Македонии под руководством опытных наставников.",
   "description": "Эта стажировка предоставляет возможность студентам и молодым специалистам медицинской сферы получить ценный опыт работы в больницах Северной Македонии, включая университетскую клинику Матери Терезы, под руководством опытных наставников.",
   "provider": "GMM Ltd",
-  "logo": "https://ru.studyqa.com/web/internship/img/footer-logo.png",
 
   "requirements": [
     "Английский язык - Upper-Intermediate",
@@ -200,68 +166,7 @@
     "Северная Македония",
     "Стажировка за рубежом",
     "Медицинская практика"
-  ],
-
-  "form": {
-    "name": {
-      "type": "string",
-      "required": true,
-      "label": "Введите ваше имя (латиницей)"
-    },
-    "email": {
-      "type": "email",
-      "required": true,
-      "name": "Введите ваш Email"
-    },
-    "phone": {
-      "type": "tel",
-      "required": true,
-      "name": "Введите ваш номер телефона (+XXXXXXX...)"
-    },
-    "country": {
-      "type": "select",
-      "required": true,
-      "name": "Выберите вашу страну",
-      "options": [
-        {"value": "4", "label": "Афганистан"},
-        ...
-        {"value": "807", "label": "Северная Македония"}
-      ]
-    },
-    "city": {
-      "type": "string",
-      "required": true,
-      "name": "Введите ваш город"
-    },
-    "age": {
-      "type": "number",
-      "required": true,
-      "min": 10,
-      "max": 90,
-      "name": "Введите ваш возраст"
-    },
-    "gender": {
-      "type": "select",
-      "required": true,
-      "name": "Выберите ваш пол",
-      "options": [
-        {"value": "0", "label": "Женский"},
-        {"value": "1", "label": "Мужской"}
-      ]
-    },
-    "english_level": {
-      "type": "select",
-      "required": true,
-      "name": "Выберите ваш уровень английского",
-      "options": [
-        {"value": "Beginner", "label": "Beginner"},
-        {"value": "Intermediate", "label": "Intermediate"},
-        {"value": "Upper-Intermediate", "label": "Upper-Intermediate"},
-        {"value": "Advanced", "label": "Advanced"},
-        {"value": "Proficiency", "label": "Proficiency"}
-      ]
-    }
-  }
+  ]
 },
 {
   "link": "https://ru.studyqa.com/internships/view/italy-medical-internship",
@@ -271,7 +176,6 @@
   "short_description": "Уникальная стажировка для студентов и молодых врачей в Неаполе, Италия.",
   "description": "Эта стажировка представляет собой уникальную возможность для студентов и молодых врачей работать с ведущими специалистами в Италии и Европе, развивая знания в области медицины.",
   "provider": "Университетская клиника «Федерико II»",
-  "logo": "https://ru.studyqa.com/web/internship/img/logo.png", // Example logo URL
 
   "requirements": [
     "Студент медицинского ВУЗа или молодой/опытный врач",
@@ -347,34 +251,7 @@
     "Стажировка",
     "Италия",
     "Неаполь"
-  ],
-
-  "form": {
-    "name": {
-      "type": "string",
-      "required": true,
-      "label": "Введите ваше имя (латиницей)"
-    },
-    "email": {
-      "type": "email",
-      "required": true,
-      "name": "Введите ваш Email"
-    },
-    "phone": {
-      "type": "tel",
-      "required": true,
-      "name": "Введите ваш телефон (+XX XXX XXXXXXXX)"
-    },
-    "country": {
-      "type": "select",
-      "required": true,
-      "name": "Выберите вашу страну",
-      "options": [
-        {"value": "4", "label": "Афганистан"},
-        // Add more countries as needed
-      ]
-    }
-  }
+  ]
 },
 {
   "link": "https://ru.studyqa.com/internships/view/hair-medical-internship",
@@ -384,7 +261,6 @@
   "short_description": "Стажировка в клинике EGES HAİR CLİNİC в Измире, Турция, для студентов, ординаторов и врачей.",
   "description": "Уникальная возможность пройти стажировку в клинике EGES HAİR CLİNİC, специализирующейся на трансплантации волос, с теоретическими и практическими занятиями.",
   "provider": "EGES HAİR CLİNİC",
-  "logo": "https://example.com/eges-hair-clinic-logo.png", // Placeholder, please update
 
   "requirements": [
     "Английский язык - Intermediate",
@@ -446,10 +322,7 @@
   ],
 
   "allowance": "Неоплачиваемая",
-  "expenses": [
-    "Перелет",
-    "Страховка"
-  ],
+  "expenses": "Перелет, Страховка",
 
   "additional": [
     {
@@ -472,69 +345,7 @@
     "Медицина",
     "Трансплантация волос",
     "Измир"
-  ],
-
-  "form": {
-    "name": {
-      "type": "string",
-      "required": true,
-      "label": "Имя (латиницей)"
-    },
-    "email": {
-      "type": "email",
-      "required": true,
-      "name": "Email"
-    },
-    "phone": {
-      "type": "tel",
-      "required": true,
-      "name": "Телефон",
-      "pattern": "^\+[0-9]{5,20}$"
-    },
-    "country": {
-      "type": "select",
-      "required": true,
-      "name": "Страна",
-      "options": [
-        // List of countries as in the original HTML, translated to Russian
-        {"value": "4", "label": "Афганистан"},
-        // ...
-      ]
-    },
-    "city": {
-      "type": "string",
-      "required": true,
-      "name": "Город"
-    },
-    "age": {
-      "type": "number",
-      "required": true,
-      "name": "Возраст",
-      "min": 10,
-      "max": 90
-    },
-    "gender": {
-      "type": "select",
-      "required": true,
-      "name": "Пол",
-      "options": [
-        {"value": "0", "label": "Женский"},
-        {"value": "1", "label": "Мужской"}
-      ]
-    },
-    "english_level": {
-      "type": "select",
-      "required": true,
-      "name": "Уровень английского",
-      "options": [
-        {"value": "Beginner", "label": "Beginner"},
-        {"value": "Intermediate", "label": "Intermediate"},
-        {"value": "Upper-Intermediate", "label": "Upper-Intermediate"},
-        {"value": "Advanced", "label": "Advanced"},
-        {"value": "Proficiency", "label": "Proficiency"}
-      ]
-    }
-  }
+  ]
 },
 {
   "link": "https://ru.studyqa.com/internships/view/saint-mames-internship",
@@ -544,7 +355,6 @@
   "short_description": "Развитие навыков в гостинично-туристическом бизнесе во Франции",
   "description": "Уникальная возможность пройти стажировку в крупном туристическом комплексе отельного типа в городе Сен-Маме, Франция, на ресепшен.",
   "provider": "GMM Ltd",
-  "logo": "", // Placeholder, as the logo URL was not provided in the HTML
 
   "requirements": [
     "Возраст от 18 лет",
@@ -593,10 +403,7 @@
   ],
 
   "allowance": "От $ 626 /мес. с возможными чаевыми",
-  "expenses": [
-    "Проживание",
-    "Питание"
-  ],
+  "expenses": "Проживание, Питание",
 
   "additional": [
     {
@@ -618,66 +425,7 @@
     "Туризм",
     "Франция",
     "Стажировка за рубежом"
-  ],
-
-  "form": {
-    "name": {
-      "type": "string",
-      "required": true,
-      "label": "Введите ваше имя (латиницей)"
-    },
-    "email": {
-      "type": "email",
-      "required": true,
-      "name": "Введите ваш адрес электронной почты"
-    },
-    "phone": {
-      "type": "tel",
-      "required": true,
-      "name": "Введите ваш номер телефона (+XXXXXXX...)"
-    },
-    "country": {
-      "type": "select",
-      "required": true,
-      "name": "Выберите вашу страну",
-      "options": [
-        // List of countries as in the original HTML select
-      ]
-    },
-    "city": {
-      "type": "string",
-      "required": true,
-      "name": "Введите ваш город"
-    },
-    "age": {
-      "type": "number",
-      "required": true,
-      "min": 10,
-      "max": 90,
-      "name": "Введите ваш возраст"
-    },
-    "gender": {
-      "type": "select",
-      "required": true,
-      "name": "Выберите ваш пол",
-      "options": [
-        {"value": "0", "label": "Женский"},
-        {"value": "1", "label": "Мужской"}
-      ]
-    },
-    "lang_level": {
-      "type": "select",
-      "required": true,
-      "name": "Выберите ваш уровень английского",
-      "options": [
-        {"value": "Beginner", "label": "Beginner"},
-        {"value": "Intermediate", "label": "Intermediate"},
-        {"value": "Upper-Intermediate", "label": "Upper-Intermediate"},
-        {"value": "Advanced", "label": "Advanced"},
-        {"value": "Proficiency", "label": "Proficiency"}
-      ]
-    }
-  }
+  ]
 },
 {
   "link": "https://ru.studyqa.com/internships/view/china-hotels",
@@ -687,7 +435,6 @@
   "short_description": "Уникальная возможность перезагрузить карьеру, изучить китайский язык и обзавестись новыми знакомствами в гостиницах Китая.",
   "description": "Программа предназначена для тех, кто хочет перезагрузить свою карьеру, подтянуть или выучить перспективный китайский язык и открыть для себя новый мир, а также обзавестись множеством новых и полезных знакомств!",
   "provider": "GMM Ltd",
-  "logo": "https://ru.studyqa.com/web/internship/img/logo.png",
 
   "requirements": [
     "Возраст от 18 лет.",
@@ -770,244 +517,6 @@
     "Китай",
     "Стажировка",
     "Оплачиваемая стажировка"
-  ],
-
-  "form": {
-    "name": {
-      "type": "string",
-      "required": true,
-      "label": "Введите ваше имя (латиницей)"
-    },
-    "email": {
-      "type": "email",
-      "required": true,
-      "name": "Введите ваш Email"
-    },
-    "phone": {
-      "type": "tel",
-      "required": true,
-      "name": "Введите ваш телефон (+XXXXXXX)"
-    },
-    "country": {
-      "type": "select",
-      "required": true,
-      "name": "Выберите вашу страну",
-      "options": [
-        {"value": "4", "label": "Afghanistan"},
-        // Add more countries as needed
-      ]
-    },
-    "city": {
-      "type": "string",
-      "required": true,
-      "name": "Введите ваш город"
-    },
-    "age": {
-      "type": "number",
-      "required": true,
-      "min": 18,
-      "name": "Введите ваш возраст"
-    },
-    "gender": {
-      "type": "select",
-      "required": true,
-      "name": "Выберите ваш пол",
-      "options": [
-        {"value": "0", "label": "Женский"},
-        {"value": "1", "label": "Мужской"}
-      ]
-    },
-    "english_level": {
-      "type": "select",
-      "required": true,
-      "name": "Выберите ваш уровень английского",
-      "options": [
-        {"value": "Beginner", "label": "Beginner"},
-        {"value": "Intermediate", "label": "Intermediate"},
-        {"value": "Upper-Intermediate", "label": "Upper-Intermediate"},
-        {"value": "Advanced", "label": "Advanced"},
-        {"value": "Proficiency", "label": "Proficiency"}
-      ]
-    }
-  }
-},
-{
-  "link": "", // Ссылка на стажировку (не найдена в предоставленном HTML)
-  "form_link": "", // Ссылка на форму заявки (не найдена в предоставленном HTML)
-  
-  "name": "Курс «Организация системы здравоохранения» в Италии",
-  "short_description": "Курс для врачей, среднего медицинского персонала, экономистов и управленцев.",
-  "description": "Основная цель курса - анализ, изучение и оценка возможности применения европейской модели управления общественного здравоохранения.",
-  "provider": "Не указан", // Поставщик стажировки (не найден в предоставленном HTML)
-  "logo": "", // Логотип поставщика (не найден в предоставленном HTML)
-  
-  "requirements": [
-    "Возраст: 18 - 48",
-    "Уровень английского: Intermediate",
-    "Мотивационное письмо"
-  ],
-  "advantages": [
-    "Сертификат европейского образца",
-    "Встреча и проводы в аэропорту",
-    "Питание - полупансион",
-    "Абонемент на все виды транспорта на весь период стажировки",
-    "Страховка",
-    "Обзорные экскурсии по Неаполю",
-    "Проживание",
-    "Питание",
-    "Страховка"
-  ],
-  "target": [
-    "Врачи",
-    "Средний медицинский персонал",
-    "Экономисты",
-    "Управленцы"
-  ],
-  "discipline": [
-    "Здравоохранение"
-  ],
-  
-  "place": [
-    "Италия",
-    "Неаполь"
-  ],
-  "period_of_internship": "2 недели",
-  
-  "selection_stages": [
-    {
-      "name": "Выбор кандидатов",
-      "period": "До начала курса",
-      "objectives": [
-        "Проверка мотивационного письма",
-        "Оценка языковых навыков"
-      ]
-    },
-    {
-      "name": "Подтверждение участия",
-      "period": "После выбора кандидатов",
-      "objectives": [
-        "Подтверждение участия в курсе",
-        "Оплата стажировки"
-      ]
-    },
-    {
-      "name": "Начало курса",
-      "period": "По графику",
-      "objectives": [
-        "Участие в лекциях и семинарах",
-        "Практическое применение знаний"
-      ]
-    }
-  ],
-  
-  "allowance": "Неоплачиваемая",
-  "expenses": [
-    "Перелет",
-    "Визовый сбор"
-  ],
-  
-  "additional": [
-    {
-      "title": "Возможность прохождения стажировки круглый год",
-      "description": "Курс доступен на протяжении всего года."
-    },
-    {
-      "title": "Сертификат европейского образца",
-      "description": "По окончании курса выдается сертификат европейского образца."
-    },
-    {
-      "title": "Обзорные экскурсии по Неаполю",
-      "description": "Участники курса могут участвовать в обзорных экскурсиях по городу."
-    }
-  ],
-  
-  "tags": [
-    "Здравоохранение",
-    "Италия",
-    "Неаполь",
-    "Курс",
-    "Стажировка"
-  ],
-  
-  "form": {
-    "name": {
-      "type": "string",
-      "required": true,
-      "label": "Введите ваше имя (латиницей)"
-    },
-    "email": {
-      "type": "email",
-      "required": true,
-      "name": "Введите ваш email"
-    },
-    "phone": {
-      "type": "tel",
-      "required": true,
-      "name": "Введите ваш телефон (+XXXXXXX...)"
-    },
-    "country": {
-      "type": "select",
-      "required": true,
-      "name": "Выберите вашу страну",
-      "options": [
-        // Список стран, как в предоставленном HTML, слишком длинный для перечисления здесь.
-        // Пожалуйста, добавьте его самостоятельно, используя предоставленный HTML как справочный материал.
-      ]
-    },
-    "city": {
-      "type": "string",
-      "required": true,
-      "name": "Введите ваш город"
-    },
-    "age": {
-      "type": "number",
-      "required": true,
-      "min": 10,
-      "max": 90,
-      "name": "Введите ваш возраст"
-    },
-    "gender": {
-      "type": "select",
-      "required": true,
-      "name": "Выберите ваш пол",
-      "options": [
-        {
-          "value": "0",
-          "label": "Женский"
-        },
-        {
-          "value": "1",
-          "label": "Мужской"
-        }
-      ]
-    },
-    "english_level": {
-      "type": "select",
-      "required": true,
-      "name": "Выберите ваш уровень английского",
-      "options": [
-        {
-          "value": "Beginner",
-          "label": "Beginner"
-        },
-        {
-          "value": "Intermediate",
-          "label": "Intermediate"
-        },
-        {
-          "value": "Upper-Intermediate",
-          "label": "Upper-Intermediate"
-        },
-        {
-          "value": "Advanced",
-          "label": "Advanced"
-        },
-        {
-          "value": "Proficiency",
-          "label": "Proficiency"
-        }
-      ]
-    }
-  }
+  ]
 }
 ]

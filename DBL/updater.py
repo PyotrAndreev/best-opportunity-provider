@@ -6,7 +6,7 @@ import DBL.api_worker as api_worker
 
 def get_opportunities_list():
     # names = parse_all()
-    names = ['allVacancyCard_JSON_Yandex']
+    names = ['allVacancyCard_JSON_Yandex', 'allVacancyCard_JSON_Studyqa']
     opportunities = []
     for json_fname in names:
         if (result := json_worker.parse_opportunity_json(json_fname)) is None:

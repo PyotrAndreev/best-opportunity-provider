@@ -67,7 +67,7 @@ OPPORTUNITY_FILTER_MODEL = {
         '__list_item_type__': [str]
     },
     'period_of_internship': {
-        'required': True,
+        'required': False,
         'types_supported': [str]
     },
     'selection_stages': {

@@ -1,6 +1,6 @@
 # from db import *
 
-api_key = 'dev-13703f17966fac015a2e6b05901c9547f2987d11d7d8ae28f09474571a1bf9dd'
+api_key = 'dev-ed3ddc838c112d8f6a487890d2a6155645282dc0656a3322628aa2a390bb1ecf'
 
 
 def generate_api_key():
