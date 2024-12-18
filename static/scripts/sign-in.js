@@ -27,10 +27,14 @@ loginBtn.addEventListener('click', (e) => {
         if (response.status === 422) {
             response_json = await response.json()
             Object.keys(response_json).forEach(key => {
+                let error_p = document.createElement("p")
+                error_p.classList.add("error-p")
                 if (key === 'email') {
-                    emailField.parentElement.childNodes[2].textContent = response_json[key][0]['message']
+                    error_p.innerText = response_json[key][0]['message']
+                    emailField.parentElement.appendChild(error_p)
                 } else if (key === 'password') {
-                    passwordField.parentElement.childNodes[2].textContent = response_json[key][0]['message']
+                    error_p.innerText = response_json[key][0]['message']
+                    passwordField.parentElement.appendChild(error_p)
                 }
             })
             return

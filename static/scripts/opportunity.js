@@ -18,17 +18,30 @@ function loadOpportunityDump() {
     provider_logo.src = dump.provider_logo_url
     let provider_name = document.createElement("p")
     provider_name.innerText = dump.provider_name
+    provider_name.onclick = (e) => {
+        location.href = `/opportunities?provider_ids=${dump.provider_id}`
+    }
     provider_container.appendChild(provider_logo)
     provider_container.appendChild(provider_name)
 
+
     const tags_container = document.getElementById("tags-container")
     for (let [id, name] of Object.entries(dump.tags)) {
-        tags_container.appendChild(createTag(id, name))
+        let tag = createTag(id, name)
+        tag.onclick = (e) => {
+            location.href = `/opportunities?tag_ids=${id}`
+        }
+
+        tags_container.appendChild(tag)
     }
 
     const geotags_container = document.getElementById("geotags-container")
     for (let [id, name] of Object.entries(dump.geotags)) {
-        geotags_container.appendChild(createGeotag(id, name))
+        let tag = createGeotag(id, name)
+        tag.onclick = (e) => {
+            location.href = `/opportunities?geotag_ids=${id}`
+        }
+        geotags_container.appendChild(tag)
     }
 
     const form_link = document.getElementById("opportunity-link")

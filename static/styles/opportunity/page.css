@@ -18,9 +18,8 @@ body {
     /*gap: 15px;*/
     height: 100%;
     grid-template-columns: 1fr 6fr 1fr;
-    grid-template-rows: 15px 170px 15px 40px auto 15px;
+    grid-template-rows: 15px auto 15px 40px 1fr 15px;
 }
-
 
 #opportunity-form-header {
     grid-column: 2 / 3;
@@ -28,7 +27,10 @@ body {
     background-color: #f6f8fa;
     border: 1px solid #dddfe1;
     border-radius: 5px;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
     grid-template-rows: 10px auto 5px auto 5px auto 5px auto 5px auto 10px;
     grid-template-columns: 10px auto 10px;
 }
@@ -103,7 +105,7 @@ h4 {
 }
 
 
-#tags-container p, #geotags-container p {
+#tags-container p, #geotags-container p, #provider-container p {
     background-color: #dddfe1;
     border: 1px solid #f6f8fa;
     font-weight: bold;
@@ -113,9 +115,10 @@ h4 {
     padding: 5px;
     display: inline-block;
     transition: scale .2s ease-in-out, background-color .2s ease-in-out;
+    cursor: pointer;
 }
 
-#tags-container p:hover, #geotags-container p:hover {
+#tags-container p:hover, #geotags-container p:hover, #provider-container p:hover {
     background-color: #edebeb;
     scale: 1.1;
     transition: scale .2s ease-in-out, background-color .2s ease-in-out;
@@ -126,6 +129,7 @@ h4 {
     grid-column: 2 / 3;
     font-size: 24px;
     font-weight: bolder;
+    height: auto;
 }
 
 #opportunity-form-provider {
@@ -245,5 +249,6 @@ input:focus, select:focus {
     grid-column: 2 / 3;
     grid-row: 10 / 11;
     display: flex;
+    align-items: center;
     gap: 10px;
 }
