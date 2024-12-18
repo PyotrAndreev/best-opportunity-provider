@@ -345,7 +345,10 @@ function initializeFilters() {
 
 function createOpportunityCards(cards) {
     const cardsContainer = document.getElementById("cards-container")
-    cardsContainer.innerText = JSON.stringify(cards)
+    cardsContainer.innerHTML = ""
+    cards.forEach(card => {
+        cardsContainer.appendChild(createOpportunityCard(card))
+    })
 }
 
 function fetchOpportunityCards() {
