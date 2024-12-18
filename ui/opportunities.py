@@ -26,6 +26,12 @@ def opportunities(
             'user': get_user_dict(personal_api_key.user),
             'filters': _filters.get_dict(),
         }
+        context['filters']['pages'] = db.Opportunity.filter_pages(
+            session,
+            providers=_filters.providers,
+            tags=_filters.tags,
+            geotags=_filters.geotags,
+        )
     for key, value in context['filters'].items():
         context['filters'][key] = json.dumps(value)
     context['filters']['page'] = filters.page
