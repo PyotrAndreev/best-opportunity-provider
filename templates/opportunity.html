@@ -4,45 +4,46 @@
 {% block head %}
     {{ super() }}
     <!-- TODO: add stylesheets -->
+    <link rel="stylesheet" href="../static/styles/opportunity/page.css">
     <script id="opportunity-dump" type="application/json">
-        {
-            "opportunity_id": "{{ id }}"
-        }
+        {{ opportunity_dump|safe }}
     </script>
 {% endblock %}
 {% block content %}
-    <h2>Opportunity</h2>
-    <div>
-        <h4>Name</h4>
-        <p>{{ name }}</p>
-    </div>
-    <div>
-        <h4>Provider</h4>
-        <div id="provider-container" style="cursor:pointer"
-         onclick="document.location.href='/opportunities?provider_ids={{ provider_id }}'">
-            <img src="{{ provider_logo_url }}" style="max-width: 32px; max-height: 32px;">
-            <p>{{ provider_name }}</p>
+    <div id="opportunity-form-div">
+        <div id="opportunity-form-header">
+            <div id="opportunity-form-name"></div>
+            <div id="opportunity-form-provider">
+                <h4>Provider:</h4>
+                <div id="provider-container"></div>
+            </div>
+            <div id="opportunity-form-tags">
+                <h4>Tags:</h4>
+                <div id="tags-container"></div>
+            </div>
+            <div id="opportunity-form-geotags">
+                <h4>Geo Tags:</h4>
+                <div id="geotags-container"></div>
+            </div>
+            <div id="opportunity-form-link">
+                <h4>Link:</h4>
+                <a id="opportunity-link">https??</a>
+            </div>
         </div>
-    </div>
-    <div>
-        <h4>Tags</h4>
-        <div id="tags-container">
-            {{ tags|safe }}
+        <div class="tab">
+          <button class="tab-links" onclick="changeTab(event, 0)">Description</button>
+          <button class="tab-links" onclick="changeTab(event, 1)">Submit</button>
+          <button class="tab-links" onclick="changeTab(event, 2)">Tracking</button>
         </div>
-    </div>
-    <div>
-        <h4>Geotags</h4>
-        <div id="geotags-container">
-            {{ geotags|safe }}
+        <div id="opportunity-form-description" class="tab-content">
+            <div id="description-container"></div>
         </div>
-    </div>
-    <div>
-        <h4>Description</h4>
-        <div id="description-container"></div>
-    </div>
-    <div>
-        <h4>Form</h4>
-        <div id="form-container"></div>
+        <div id="opportunity-form-container" class="tab-content">
+            <div id="form-container"></div>
+        </div>
+        <div id="opportunity-form-tracking" class="tab-content">
+            <div id="tracking-container"></div>
+        </div>
     </div>
 {% endblock %}
 {% block scripts %}

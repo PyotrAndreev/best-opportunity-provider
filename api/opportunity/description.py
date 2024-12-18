@@ -73,7 +73,7 @@ def update_opportunity_description(
         if not isinstance(api_key, db.DeveloperAPIKey):
             return JSONResponse(api_key, status_code=422)
         opportunity = mw.get_opportunity_by_id(
-            session, query.opportunty_id, error_code=ErrorCode.INVALID_OPPORTUNITY_ID
+            session, query.opportunity_id, error_code=ErrorCode.INVALID_OPPORTUNITY_ID
         )
         if not isinstance(opportunity, db.Opportunity):
             return JSONResponse(opportunity, status_code=422)

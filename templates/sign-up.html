@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 
 <html>
-    <head></head>
+    <head>
+         <link rel="stylesheet" href="/static/styles/login.css">
+    </head>
 
     <body>
-        <h2>Sign-up</h2>
         <div id="login_form">
-            <p>
-                Email:<br>
-                <div>
-                    <input id="login_form_email" name="email" />
-                    <p></p>
-                </div>
-            </p>
-            <p>
-                Password:<br>
-                <div>
-                    <input id="login_form_password" name="password"/>
-                    <p></p>
-                </div>
-            </p>
-            <button id="login_form_btn">Submit</button>
+        <div id="header">
+            <img src="../static/temp/chill.jpg" alt="logo">
+            <p id="header-greeting">Sign up to Offer</p>
         </div>
+        <div id="login-form-content">
+            <div id="login-form-email-div">
+                <label for="login_form_email">Email:</label>
+                <input id="login_form_email" name="email" placeholder="Email"/>
+            </div>
+            <div id="login-form-password-div">
+                <label for="login_form_password">Password: </label>
+                <input type="password" id="login_form_password" name="password" placeholder="Password"/>
+            </div>
+            <div id="login-form-btn-div">
+                <button id="login_form_btn">Sign up</button>
+            </div>
+        </div>
+        <div id="registration-div-form">
+            <div id="login-form-registration-div">
+                <p>Already has an account? <a href="">Sign up</a> </p>
+            </div>
+        </div>
+    </div>
     </body>
 <script src="/static/scripts/sign-up.js"></script>
 </html>

@@ -32,16 +32,31 @@
                 </div>
                 <div id="user-container">
                     {% if user %}
-                        <p id="user-email">{{ user['email'] }}</p>
-                        <img id="user-avatar" src="{{ user['avatar_url'] }}" style="max-width: 32px; max-height: 32px;">
+                        <div id="user-container-info">
+                            <p id="user-email">{{ user['email'] }}</p>
+                            <img id="user-avatar" src="{{ user['avatar_url'] }}" style="max-width: 32px; max-height: 32px;">
+                        </div>
+                        <div id="user-dropdown-menu">
+                            <a class="user-dropdown-option" id="logout-option">
+                                <img src="/static/img/chill.jpg">
+                                <p>Log out</p>
+                            </a>
+                            <a href="/me/info" class="user-dropdown-option">
+                                <img src="/static/img/chill.jpg">
+                                <p>Settings</p>
+                            </a>
+                        </div>
                     {% else %}
                         <a href="/sign-in">Sign in</a>
                         <a href="/sign-up">Sign up</a>
                     {% endif %}
+
                 </div>
             </div>
             <div id="content-container">{% block content %}{% endblock %}</div>
         </div>
     </body>
-    {% block scripts %}{% endblock %}
+    <script src="/static/scripts/header.js"></script>
+    {% block scripts %}
+    {% endblock %}
 </html>

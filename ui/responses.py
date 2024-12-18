@@ -21,8 +21,11 @@ def responses(
         _filters = mw.validate_filter(session, filters)
         if not isinstance(_filters, mw.Filter):
             return RedirectResponse('/me/responses')
-        context = _filters.get_dict()
-    for key, value in context.items():
-        context[key] = json.dumps(value)
-    context['page'] = filters.page
+        context = {
+            'user': get_user_dict(personal_api_key.user),
+            'filters': _filters.get_dict(),
+        }
+    for key, value in context['filters'].items():
+        context['filters'][key] = json.dumps(value)
+    context['filters']['page'] = filters.page
     return templates.TemplateResponse(request, 'responses.html', context=context)
