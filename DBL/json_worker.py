@@ -34,7 +34,7 @@ def clear_record_empty_fields(opp_record: dict):
 
 
 def record_check_by_keys(opp_record: dict, fname, record_index) -> bool:  # True = success
-    not_valid_type_mes = lambda k: f'Opportunity #{record_index} in "{fname}" has not valid type of "{k}" field'
+    not_valid_type_mes = lambda k: f'Opportunity #{record_index + 1} in "{fname}" has not valid type of "{k}" field'
 
     keys_to_del = []
     models = OPPORTUNITY_FILTER_MODEL.copy()
@@ -64,7 +64,7 @@ def record_check_by_keys(opp_record: dict, fname, record_index) -> bool:  # True
     # rm empty keys
     remove_dict_keys(opp_record, keys_to_del)
     # Check remaining models
-    req_models = [m_nm for m_nm, m_desc in models if m_desc['required']]
+    req_models = [m_nm for m_nm, m_desc in models.items() if m_desc['required']]
     if req_models:
         dbl_err(f'Opportunity #{record_index} in "{fname}" has not required fields: {", ".join(req_models)}')
         return False
@@ -77,8 +77,7 @@ def filter_opportunity_record(opp_record, fname, record_index):
     # Clear empty fields
     clear_record_empty_fields(opp_record)
     # KeyWorker
-    record_check_by_keys(opp_record, fname, record_index)
-    return opp_record
+    return record_check_by_keys(opp_record, fname, record_index)
 
 
 def parse_opportunity_json(fname: str):
@@ -86,10 +85,12 @@ def parse_opportunity_json(fname: str):
     json_data = load_from_file(fname)
     if 'error' in json_data:
         dbl_err(f'Can\' parse all file "{fname}". Reason: {json_data["error"]}')
+        return
     dbl_log(f'Loaded opportunity set file: {fname}')
     # Filter
     if not isinstance(json_data.get('json'), list):
         dbl_err(f'Json file "{fname}" is not list instance')
+        return
     filtered_opp_list = []
     for ind, opp_record in enumerate(json_data['json']):
         if filter_opportunity_record(opp_record, fname, ind):

@@ -36,7 +36,11 @@ OPPORTUNITY_FILTER_MODEL = {
         'required': True,
         'types_supported': [str]
     },
-    # TODO: provider, logo
+    # TODO: logo
+    'provider': {
+        'required': True,
+        'types_supported': [str]
+    },
     'requirements': {
         'required': False,
         'types_supported': [list, str],

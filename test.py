@@ -1,12 +1,4 @@
-from DBL.ai.match_fields import match_fields
+import DBL
 
-example = {
-    "name": "Имя",
-    "tel": "Телефон",
-    "email": "Электронная почта",
-    "birth_day": "Дата рождения",
-    "cv": "Резюме",
-    "motivation_letter": "Мотивационное письмо"
-}
-
-print(match_fields(example))
+DBL.init_dbl()
+DBL.update()

@@ -1434,7 +1434,7 @@
       "required": true,
       "name": "Введите ваш email"
     },
-    {
+    "zxc": {
       "type": "textarea",
       "required": false,
       "label": "Расскажите о себе (необязательно)"
@@ -1715,13 +1715,13 @@
       "required": true,
       "name": "Введите ваш email"
     },
-    {
+    "zxc": {
       "title": "Расскажите о себе",
       "type": "textarea",
       "required": true,
       "label": "Напишите пару слов о себе и своем опыте"
     },
-    {
+    "qwe": {
       "title": "Прикрепите ваше резюме",
       "type": "file",
       "required": false,
