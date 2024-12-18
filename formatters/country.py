@@ -7,4 +7,6 @@ class CountryFormatter(BaseSerializerFormatter):
             transform_str_error_factory('Country name', min_length=1, max_length=50)),
         phone_code=append_serializer_field_error_factory(
             transform_int_error_factory('Phone code', ge=1, le=999)),
+        flag=append_serializer_field_error_factory(
+            transform_str_error_factory('Flag', min_length=1, max_length=4)),
     )
