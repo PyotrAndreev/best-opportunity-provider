@@ -24,7 +24,7 @@ def serialize_form_type(field: dict) -> dict:
     if tp == 'number':
         return {"type": "number", "le": field['min'], "ge": field['max']}
     if tp == 'email':
-        return {"type": "regex", "regex": r"^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$"}  # TODO: learn
+        return {"type": "regex", "regex": r"^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$"}
     if tp == 'choice':
         return {"type": "choice", "choices": field['choices']}
     if tp == 'file':
