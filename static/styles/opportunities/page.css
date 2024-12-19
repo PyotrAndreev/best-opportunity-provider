@@ -283,6 +283,8 @@ body {
     border-radius: 5px;
     text-align: center;
     width: auto;
+    white-space: nowrap;
+    text-overflow: clip;
     padding: 3px;
     padding-left: 5px;
     padding-right: 5px;

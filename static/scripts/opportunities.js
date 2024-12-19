@@ -341,6 +341,8 @@ function initializeFilters() {
         if (same_filters(history.state.filters)) {
             return
         }
+        filters.page = 1
+        filters.pages = null
         history.pushState({ filters: copy_filters(filters), fetched: false }, "", serialize_filters())
         fetchOpportunityCards()
         handleNavigationButtons()
@@ -374,6 +376,27 @@ function fetchOpportunityCards() {
         const cardsContainer = document.getElementById("cards-container")
         cardsContainer.innerText = "Something went wrong, try again later"
     })
+    if (filters.pages === null) {
+        fetch(`/api/opportunity-cards/pages${serialize_filters()}`, {
+            method: "GET"
+        })
+        .then(async (response) => {
+            if (response.status === 200) {
+                filters.pages = await response.json().then(json => json.pages)
+                history.replaceState(
+                    Object.assign(
+                        history.state,
+                        {
+                            filters: Object.assign(history.state.filters, { pages: filters.pages })
+                        }), ""
+                )
+                handleNavigationButtons()
+            } else if (response.status === 422) {
+                document.location.href = "/sign-in"
+                return
+            }
+        })
+    }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -409,7 +432,7 @@ function initializeNavigationButton() {
 function handleNavigationButtons() {
     const next_page_button = document.getElementById("next-page-button")
     const prev_page_button = document.getElementById("prev-page-button")
-    if (filters.page === filters.pages) {
+    if (filters.pages === null || filters.page === filters.pages) {
         next_page_button.classList.add("disabled")
     } else {
         next_page_button.classList.remove("disabled")
@@ -427,7 +450,6 @@ window.addEventListener("popstate", (event) => {
     updateTagFilterItems()
     updateGeotagFilterItems()
     handleNavigationButtons()
-
     if (!event.state.fetched) {
         fetchOpportunityCards()
     } else {
