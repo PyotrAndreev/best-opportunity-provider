@@ -2,11 +2,8 @@ import json
 
 from .config import *
 from .utils import *
-from .api import *
+from . import api
 
-
-TAGS_LIST_PATH = 'DBL/tags/tags_list.txt'
-TAGS_JSON_PATH = 'DBL/tags/session_tags_info.json'
 TAGS_MAP = {}
 
 
@@ -24,10 +21,7 @@ def create_tag(tag_name: str) -> int:
         int: The ID of the created tag if successful, or -1 if the tag creation fails.
     """
 
-    json = {
-        "name": tag_name
-    }
-    response = requests.post(f'{HOST}/api/private/opportunity-tag?api_key={api_key}', json=json)
+    response = api.create_tag_request(tag_name)
     if not response:
         dbl_err(f'Can not create tag "{tag_name}"')
         return -1
@@ -49,7 +43,7 @@ def update_tags():
     """
 
     # Get DB tags
-    response = requests.get(f'{HOST}/api/private/opportunity-tag/all?api_key={api_key}')
+    response = api.get_all_tags_request()
     if not response:
         dbl_err(f'Can not load tags from DB')
         return
@@ -116,9 +110,5 @@ def update_opportunity_tags(tag_list: list[str], opportunity_id: int) -> bool:
         tag_ids += [tag_id]
     tag_ids.sort()
     # Update tags
-    json = {
-        "tag_ids": tag_ids
-    }
-    # TODO: Musha must change method on PUT
-    response = requests.post(f'{HOST}/api/private/opportunity/tags?api_key={api_key}&opportunity_id={opportunity_id}', json=json)
-    return bool(response)
+    response = api.update_opportunity_tags_request(opportunity_id, tag_ids)
+    return response

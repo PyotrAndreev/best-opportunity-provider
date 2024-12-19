@@ -1,6 +1,6 @@
 from .config import *
 from .utils import *
-from .api import *
+from . import api
 
 from . import ai
 
@@ -87,10 +87,7 @@ def update_opportunity_form_fields(opportunity: dict, opportunity_id: int) -> bo
         bool: `True` if the form fields were successfully updated, otherwise `False`.
     """
 
-    json = {
-        "fields": opportunity['form']
-    }
-    response = requests.put(f'{HOST}/api/private/opportunity/form/fields?api_key={api_key}&opportunity_id={opportunity_id}', json=json)
+    response = api.update_opportunity_form_fields_request(opportunity, opportunity_id)
 
     if not response:
         dbl_err(f'Can not update opportunity (id={opportunity_id}) form')
@@ -112,10 +109,7 @@ def update_opportunity_form_submit_method(opportunity: dict, opportunity_id: int
         bool: `True` if the form submission method was successfully updated, otherwise `False`.
     """
 
-    json = {
-        "url": opportunity['form_link']
-    }
-    response = requests.put(f'{HOST}/api/private/opportunity/form/submit?api_key={api_key}&opportunity_id={opportunity_id}', json=json)
+    response = api.update_opportunity_form_submit_method_request(opportunity, opportunity_id)
 
     if not response:
         dbl_err(f'Can not update opportunity (id={opportunity_id}) form method')

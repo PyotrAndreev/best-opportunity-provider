@@ -1,6 +1,6 @@
 from .config import *
 from .utils import *
-from .api import *
+from . import api
 
 from .description import update_description_md
 from .form import update_opportunity_form
@@ -19,15 +19,11 @@ def find_opportunity_by_link(opportunity: dict) -> int:
         int: The opportunity ID if found, otherwise -1.
     """
 
-    json = {
-        "link": opportunity['link']
-    }
-    response = requests.post(f'{HOST}/api/private/opportunity?api_key={api_key}', json=json)
+    response = api.find_opportunity_by_link_request(opportunity['link'])
 
     if not response:
         return -1
-    opp_id = response.json().get('opportunity_id', -1)
-    return opp_id
+    return response.json()['opportunity_id']
 
 
 def update_opportunity(opportunity: dict, opportunity_id: int) -> bool:
@@ -76,12 +72,7 @@ def create_opportunity_main_record(opportunity: dict, provider_id: int) -> int:
     """
 
     dbl_log(f'Creating opportunity main record with name "{opportunity['name']}"')
-    json = {
-        "name": opportunity['name'],
-        "link": opportunity['link'],
-        "provider_id": provider_id
-    }
-    response = requests.post(f'{HOST}/api/private/opportunity?api_key={api_key}', json=json)
+    response = api.create_opportunity_main_record_request(opportunity, provider_id)
 
     if not response:
         dbl_err(f'Can not create opportunity "{opportunity["name"]}" record. See more: {response.json()}')
@@ -101,10 +92,7 @@ def create_opportunity_card(opportunity: dict, opportunity_id: int) -> bool:
         bool: True if the card was created successfully, otherwise False.
     """
 
-    json = {
-        "title": opportunity['name']
-    }
-    response = requests.post(f'{HOST}/api/private/opportunity-card?api_key={api_key}&opportunity_id={opportunity_id}', json=json)
+    response = api.create_opportunity_card_request(opportunity, opportunity_id)
 
     if not response:
         dbl_err(f'Can not create opportunity "{opportunity["name"]}" CARD record')

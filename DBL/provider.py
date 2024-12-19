@@ -1,6 +1,6 @@
 from .config import *
 from .utils import *
-from .api import *
+from . import api
 
 
 PROVIDERS_MAP = {}
@@ -20,7 +20,7 @@ def update_providers():
     """
 
     # Get all providers in DB
-    response = requests.get(f'{HOST}/api/private/opportunity-provider/all?api_key={api_key}')
+    response = api.get_all_providers_request()
     if not response:
         dbl_err(f'Can not load providers from DB')
         return
@@ -45,10 +45,7 @@ def create_provider(provider_name: str) -> int:
         int: The ID of the created provider if successful, or -1 if the provider creation fails.
     """
 
-    json = {
-        "name": provider_name
-    }
-    response = requests.post(f'{HOST}/api/private/opportunity-provider?api_key={api_key}', json=json)
+    response = api.create_provider_request(provider_name)
     if not response:
         dbl_err(f'Can not create provider "{provider_name}"')
         return -1

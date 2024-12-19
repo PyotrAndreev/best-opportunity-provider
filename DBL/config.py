@@ -3,3 +3,6 @@ API_KEY = 'gev-blablabla'
 
 PARSER_JSON_DIR = "DBL/json"
 TEMP_MD_DESC_FILE_PATH = "DBL/rendered/dbl_rendered_.md"
+
+TAGS_LIST_PATH = 'DBL/tags/tags_list.txt'
+TAGS_JSON_PATH = 'DBL/tags/session_tags_info.json'

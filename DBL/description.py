@@ -1,6 +1,6 @@
 from .config import *
 from .utils import *
-from .api import *
+from . import api
 
 from .renderer import save_md
 
@@ -26,7 +26,5 @@ def update_description_md(opportunity: dict, opportunity_id: int) -> bool:
     files = {
         "description": ('description.md', open(TEMP_MD_DESC_FILE_PATH, 'rb'), 'text/markdown')
     }
-    response = requests.put(
-        f'{HOST}/api/private/opportunity/description?api_key={api_key}&opportunity_id={opportunity_id}', files=files
-    )
-    return bool(response)
+    request = api.update_description_md_request(opportunity_id, files)
+    return bool(request)
