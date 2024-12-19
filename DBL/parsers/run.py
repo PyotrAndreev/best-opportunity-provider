@@ -1,6 +1,7 @@
 from importlib import import_module
 from time import sleep
-from DBL.config import *
+
+from ..utils import *
 
 PARSERS = [
     'example_maker',
