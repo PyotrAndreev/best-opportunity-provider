@@ -1,3 +1,12 @@
-[submodule "offer-db"]
-	path = offer_db
-	url = https://github.com/teviroff/offer-db.git
+[submodule "api"]
+	path = api
+	url = https://github.com/best-opportunity-provider/api.git
+[submodule "database"]
+	path = database
+	url = https://github.com/best-opportunity-provider/database.git
+[submodule "opportunity-misc"]
+	path = opportunity-misc
+	url = https://github.com/best-opportunity-provider/opportunity-misc.git
+[submodule "opportunity-backend"]
+	path = opportunity-backend
+	url = https://github.com/best-opportunity-provider/opportunity-backend.git
